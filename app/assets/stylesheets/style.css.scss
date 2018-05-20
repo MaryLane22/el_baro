@@ -1,0 +1,129 @@
+@font-face {
+    font-family:fontawesome-webfont;
+    src: url('fontawesome-webfont.ttf') format('truetype');
+}
+@font-face {
+    font-family:trench;
+    src: url('trench.otf') format('truetype');
+}
+@font-face {
+    font-family:Bourbon;
+    src: url('bon/Bourbon.otf') format('truetype');
+}
+
+body {
+    background: url(asset-path("back3.jpg"));
+     background-size: 100%;
+     /*background-size: 1390px;
+     background-position-y:-220px; */
+}
+
+h1{
+   top: 60px;
+   color:white;
+   font-size: 140px;
+   font-family: Bourbon;
+   margin-left: 3%;
+   box-sizing: border-box;
+
+}
+
+h2{
+   margin-top: 1px;
+   color:#0D1020;
+   font-size: 40px;
+   font-family: trench;
+   margin-left: 13%;
+
+   box-sizing: border-box;
+}
+
+label
+{
+  font-family: trench;
+
+}
+
+
+.section{
+    width:300px;
+    height:300px;
+    position: absolute;
+    top: 65%;
+    left: 84%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+#li_avatar{
+margin-left:80px;
+width:95px ;
+height:100px ;
+}
+
+
+form{
+    margin-top: 3%;
+    margin-left: 20px;
+
+}
+#correo2{
+    height:23px;
+    width: 170px;
+    opacity:.6;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding-left:44px;
+
+
+}
+
+#correo{
+    height:23px;
+    width: 170px;
+    opacity:.6;
+    background-image: url(asset-path("mail.png"));
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding-left:44px;
+
+
+}
+#contraseña{
+    height:23px;
+    width: 170px;
+    opacity:.6;
+    background-image: url(asset-path("password.png"));
+    background-repeat: no-repeat;
+    background-size: 22px;
+    background-position-x: 10px;
+    background-position-y: center;
+    padding-left:44px;
+}
+
+#boton{
+
+    height: 40px;
+    margin-top: 10%;
+    margin-left: 40px;
+    padding:5px 15px;
+    background:#556080;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-family:trench;
+}
+
+input::-webkit-input-placeholder {
+     color: black; /*Change the placeholder color*/
+     opacity: 0.5; /*Change the opacity between 0 and 1*/
+}
