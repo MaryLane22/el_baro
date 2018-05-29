@@ -1,0 +1,22 @@
+<%= form_tag("/", method: "get",id:'forma2') do %>
+
+  <p class='parrafos'>Nombre:</p><br>
+  <%= text_field_tag :nom,nil,placeholder:'Nombre',class: 'el',id:'nom'%><br><br>
+  <p class='parrafos' >No.Control:</p><br>
+  <%= text_field_tag :num,nil,placeholder:'Ejemplo: 14623009 ',class: 'el',id:'num'%><br><br>
+  <p class='parrafos' id='car_lbl'>Carrera:</p>
+  <%= text_field_tag :nom,nil,placeholder:'Carrera',class: 'el',id:'car'%>
+  <p class='parrafos'>Semestre:</p><br>
+  <%= text_field_tag :nom,nil,placeholder:'Semestre',class: 'el',id:'sem'%><br><br>
+
+
+
+  <p class='parrafos'>Usuario:</p><br>
+  <%= text_field_tag :nom,nil,placeholder:'Usuario',class: 'el', id:'usu'%><br><br>
+  <p class='parrafos'>Contraseña:</p><br>
+  <%= text_field_tag :nom,nil,placeholder:'Contraseña',class: 'el input',type:'password',id:'pas',onclick:"remove_class_reg();"%>
+  <%= text_field_tag :nom,nil,placeholder:'Confirmar contraseña',class: 'el input',type:'password',id:'pasc',onclick:"remove_class_reg();"%><br><br>
+  <a class='parrafos'>*La contraseña debe ser de minimo <strong>8 digitos</strong> y debe contener un <strong>digito</strong> y una letra <strong>mayuscula</strong></a><br>
+  <%= button_tag "Registrate !",type:'button', class:'registrar',id:'submit_btn',onclick:"vregistro();"%>
+
+<% end %>

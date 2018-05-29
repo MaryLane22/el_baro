@@ -1,92 +1,54 @@
 <!DOCTYPE html>
 <html>
     <head>
-<meta charset="utf-8">
- <%= stylesheet_link_tag    'style', media: 'all' %>
-</head>
+        <meta charset="utf-8">
+         <%= stylesheet_link_tag    'styles', media: 'all' %>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-<body>
-<div class='row'>
-<div class='col-xs-12'>
-                <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-            <div class='form-group'>
-            <div class="control-label col-sm-2">
-                <%= f.label :nocontrol %>
-                 </div>
-            <div class='col-sm-8'>
-                <%= f.text_field :nocontrol, id: 'correo2', placeholder: 'Ingresa tu No. Control', autofocus: true %>
-                </div>
-                </div>
-
-           <div class='form-group'>
-            <div class="control-label col-sm-2">
-                <%= f.label :nombre %>
-                </div>
-            <div class='col-sm-8'>
-                <%= f.text_field :nombre,  id: 'correo2', placeholder: 'Ingresa tu nombre' %>
-                 </div>
-                </div>
-
-                <div class='form-group'>
-                 <div class="control-label col-sm-2">
-                     <%= f.label :usuario %>
-                     </div>
-                 <div class='col-sm-8'>
-                     <%= f.text_field :usuario,  id: 'correo2', placeholder: 'Ingresa tu usuario' %>
-                      </div>
-                     </div>
+    </head>
+    <body class="imagendefondo">
+        <h1 id="registro">Registrate</h1>
 
 
+        <div class="registersection">
 
-                 <div class='form-group'>
-            <div class="control-label col-sm-2">
-                <%= f.label :password %>
-                </div>
-            <div class='col-sm-8'>
-                <%= f.password_field :password,  id: 'correo2', placeholder: 'Enter password' %>
-                 </div>
-                </div>
-
-                <div class='form-group'>
-                 <div class="control-label col-sm-2">
-                     <%= f.label :carrera %>
-                     </div>
-                 <div class='col-sm-8'>
-                     <%= f.text_field :carrera,  id: 'correo2', placeholder: 'Inslowresa tu carrera' %>
-                      </div>
-                     </div>
-
-                     <div class='form-group'>
-                      <div class="control-label col-sm-2">
-                          <%= f.label :semestre %>
-                          </div>
-                      <div class='col-sm-8'>
-                        <%= f.text_field :semestre,  id: 'correo2', placeholder: 'Ingresa tu semestre' %>
-                           </div>
-                          </div>
+          <%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
 
 
-div>
+          <p class='parrafos'>Nombre:</p><br>
+          <%= f.text_field :nombre,placeholder:'Nombre',class: 'el',id:'nom'%><br><br>
+
+          <p class='parrafos' >No.Control:</p><br>
+          <%= f.text_field :nocontrol, placeholder:'Ejemplo: 14623009 ',class: 'el',id:'num' %><br><br>
+
+            <p class='parrafos', id='car_lbl'>Carrera:</p>
+           <%= f.text_field :carrera, placeholder:'Carrera',class: 'el', id:'car'%>
+
+           <p class='parrafos'>Semestre:</p><br>
+           <%= f.text_field :semestre,placeholder:'Semestre',class: 'el', id:'sem'%><br><br>
+
+
+          <p class='parrafos'>Usuario:</p><br>
+          <%= f.text_field :usuario,placeholder:'Usuario',class: 'el', id:'usu'%><br><br>
+
+          <p class='parrafos'>Contraseña:</p><br>
+          <%= f.password_field :password, placeholder:'Contraseña',class: 'el input',id:'pas',onclick:"remove_class_reg();"%>
+           <%= text_field_tag :nom,nil,placeholder:'Confirmar contraseña',class: 'el input',type:'password',id:'pasc',onclick:"remove_class_reg();"%><br><br>
+          <a class='parrafos'>*La contraseña debe ser de minimo <strong>8 digitos</strong> y debe contener un <strong>digito</strong> y una letra <strong>mayuscula</strong></a><br>
+
+          <%= f.submit value: 'Registrarse!',class:'registrar',id:'submit_btn',onclick:"vregistro();" %>
+
+      <% end %>
+
+
+      </div>
+
+
+        <!-- SCRIPTS -->
+        <%= javascript_include_tag "reg" %>
+        <%= javascript_include_tag "https://unpkg.com/sweetalert/dist/sweetalert.min.js" %>
 
 
 
-            <div class='form-group'>
-            <div class='col-sm-offset-2 col-sm-10'>
-                <!-- Si el usuario no esta registrado el boton dira SIGN UP-->
-                <!-- Pero si ya esta registrado entonces dira UPDATE -->
-                <%= f.submit(@user.new_record? ?  "Sign up" : "Update account", id: 'boton' )%>
-                </div>
-                </div>
-
-            <% end %>
-        <div class='col-xs-4 col-xs-offset-4'>
-            [ <%= link_to "Index" , root_path%> ]
-        </div>
-</div>
-</div>
-
-
-
-
-</body>
+    </body>
 </html>

@@ -14,6 +14,8 @@ function vregistro(){
         console.log("si entra");
     }
     else {
+
+      
      $(".input").removeClass("error");
     if(num == "" || nom == "" || usu == "" || pas == ""|| car == "" || sem== "" || pasc == ""){
         swal("Campos faltantes", "Por favor, introduzca la informacion en todos campos", "warning");

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
+
+         <%= stylesheet_link_tag    'styles', media: 'all' %>
     </head>
+
     <body class="imagendefondo">
         <h1>EL BARO</h1>
 
@@ -14,32 +17,28 @@
 
          <%= form_for(:session, :html => {class: "form-horizontal", role: "form", id:'forma'}, url: login_path) do |f| %>
 
-                    <%= f.text_field :usuario,nil,placeholder:'Usuario',class: 'input',onclick:'remove_class()', autofocus: true %>
+                    <%= f.text_field :usuario,placeholder:'Usuario',class: 'input',onclick:'remove_class()', id: 'usuario'%>
                     <a id="falta_nombre" class="missing_info_alert" >Nombre de usuario requerido</a>
-                    <%= f.password_field :password,nil,placeholder:'Contraseña',class: 'input',type:'password', onclick:'remove_class()' %>
+                    <%= f.password_field :password,placeholder:'Contraseña',class: 'input',type:'password', onclick:'remove_class()' , id: 'contrasena'%>
                     <a id="falta_contraseña" class="missing_info_alert">Contraseña necesaria</a>
 
-                <div class='form-group'>
-                <div class='col-sm-offset-2 col-sm-10'>
-                    <!-- Si el usuario no esta registrado el boton dira SIGN UP-->
-                    <!-- Pero si ya esta registrado entonces dira UPDATE -->
-                    <%= f.submit "Iniciar sesion",type:'button', class:'entrar',onclick: "validar();"%>
-                    </div>
-                    </div>
-
-                <% end %>
-
-           <%= button_tag(:type => 'button',class:'registrar') do %>
+                 <%= f.submit "Iniciar sesion", class:'entrar',onclick: "validar();"%>
+                 <%= button_tag(:type => 'button',class:'registrar') do %>
            <% link_to ('Registrate!'), signup_path %>
            <% end %>
+           <% end %>
 
-         <% end %>
+
+
 
         </div>
 
         <!-- SCRIPTS -->
-        <script src="assets/javascripts/login.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
+        <%= javascript_include_tag "login" %>
+        <%= javascript_include_tag "jquery" %>
 
     </body>
+
+
+
 </html>

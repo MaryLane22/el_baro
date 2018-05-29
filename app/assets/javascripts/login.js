@@ -30,6 +30,10 @@ function validar(){
       msj_campo2.style.visibility = 'visible';
 
     }
+    else
+    {
+      $("#forma").submit();
+    }
 
 }
 

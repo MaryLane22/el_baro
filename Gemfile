@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 #To style the charts
 gem 'morrisjs-rails'
-
 gem 'raphael-rails'
 
 

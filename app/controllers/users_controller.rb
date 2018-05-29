@@ -19,6 +19,7 @@ class UsersController < ApplicationController
       redirect_to root_path
       #redirect_to user_path(@user)
     else
+      flash[:danger]="NEL PERRO "
       render 'show'
 
       #render 'new'
