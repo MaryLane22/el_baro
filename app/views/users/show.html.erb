@@ -1,1 +1,6 @@
 <h1>hellow</h1
+  <h4 align = "center">Welcome<%= @user.usuario%></h4>
+
+  <%= link_to "Comprar baros con tarjeta", new_card_transaction_path %>
+  <%= link_to "Comprar baros con oxxo", new_oxxo_transaction_path %>
+  <%= link_to "comprar servicios", new_purchase_path %>

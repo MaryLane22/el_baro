@@ -1,0 +1,23 @@
+<h1 align="center"> C O M P R A #<%= @purchase.id%> </h1>
+<div class='well col-xs-8 col-xs-offset-2'>
+
+  <% if @purchase.user %>
+   <ul class="listing">
+          <div class="row center">
+
+              <div class="col-md-4 col-md-offset-4">
+                      <li> Detalles de compra</li>
+              </div>
+          </div>
+      </ul>
+
+      <% end %>
+
+  <%= @purchase.created_at %>
+  <br>
+<%= @purchase.total%>
+
+<% if @purchase.services.any? %>
+  <p> Services: <%= render @purchase.services %> </p>
+<% end %>
+</div>

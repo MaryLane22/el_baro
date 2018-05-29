@@ -1,47 +1,55 @@
 @font-face {
-    font-family:fontawesome-webfont;
-    src: url('../assets/fonts/fontawesome-webfont.ttf') format('truetype');
+    font-family:'fontawesome-webfont';
+    src:font-url('fontawesome-webfont.ttf');
 }
 @font-face {
-    font-family:trench;
-    src: url(../assets/fonts/trench.otf);
+    font-family:'trench';
+    src:font-url('trench.otf');
 }
 @font-face {
-    font-family:Bourbon;
-    src: url(../assets/fonts/bon/Bourbon.otf);
+    font-family:'Bourbon';
+    src:url(font-path('Bourbon.otf'));
 }
 
-body {
-     background-image: url(../assets/images/back3.jpg);
-     background-size: 100%;
-     /*background-size: 1390px;
-     background-position-y:-220px; */
+body.imagendefondo {
+     background-image: image-url('back.jpg');
+     background-size: 1390px;
+     background-position-y:-220px;
 }
 
 h1{
-   top: 60px;
-   color:white;
+   color: #00B8CE;
    font-size: 140px;
-   font-family: Bourbon;
-   margin-left: 3%;
+   font-family: 'Bourbon';
+   margin-left: 77px;
+   margin-top: 80px;
+   margin-bottom: 0%;
    box-sizing: border-box;
 
 }
 
-h2{
-   margin-top: 1px;
-   color:#0D1020;
-   font-size: 40px;
-   font-family: trench;
-   margin-left: 13%;
-
-   box-sizing: border-box;
+p{
+    display: inline;
 }
+
+a:-webkit-any-link {
+    color:black;
+    cursor: auto;
+    text-decoration: none;
+
+}
+
+.parrafos{
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
 
 
 .section{
     width:300px;
-    height:300px;
+    height:310px;
     position: absolute;
     top: 65%;
     left: 84%;
@@ -49,7 +57,115 @@ h2{
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 20px;
+    background-color:white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
+
+.registersection{
+    width:740px;
+    height:460px;
+    top: 60%;
+    left: 50%;
+    padding: 20px;
+    padding-left: 90px;
+    padding-right: 120px;
+    background-color:white;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.entrar{
+
+    height: 40px;
+    margin-left: 3%;
+    padding:3px 10px;
+    background:#556080;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    display:inline;
+    margin-top: 2%;
+}
+
+.registrar{
+
+    height: 40px;
+    margin-left: 5px;
+    padding:2px 8px;
+    background:#00B8CE;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color:black;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    display:inline;
+    margin-top: 2%;
+
+}
+
+.registrar_submit_button{
+
+    height: 40px;
+    margin-top: 10%;
+    margin-left: 5px;
+    padding:2px 8px;
+    background:#00B8CE;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color:black;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    display:inline;
+
+}
+
+
+.registrarse{
+
+    height: 40px;
+    margin-top: 10%;
+    margin-left: 280px;
+    padding:2px 8px;
+    background:#00B8CE;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color:black;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    display:inline;
+
+}
+
+.el{
+    height:23px;
+    width: 190px;
+    opacity:.6;
+    padding-left:44px;
+}
+
+.missing_info_alert{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    color:red;
+    visibility: hidden;
+
+}
+
+
 
 #li_avatar{
 margin-left:80px;
@@ -59,53 +175,129 @@ height:100px ;
 
 
 form{
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 20px;
-
 }
 
-#correo{
+.forma2{
+    margin-left: 80px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+
+
+#usuario{
     height:23px;
     width: 170px;
     opacity:.6;
-    background-image: url(../assets/images/mail.png);
+    background-image: image-url('username.png');
+    background-repeat: no-repeat;
+    background-size: 36px;
+    background-position-x: 5px;
+    background-position-y: center;
+    padding-left:44px;
+    margin-bottom: 1%;
+
+
+}
+#contrasena{
+    height:23px;
+    width: 170px;
+    opacity:.6;
+    background-image: image-url('password.png');
     background-repeat: no-repeat;
     background-size: 22px;
     background-position-x: 10px;
     background-position-y: center;
     padding-left:44px;
-
-
-}
-#contraseña{
-    height:23px;
-    width: 170px;
-    opacity:.6;
-    background-image: url(../assets/images/password.png);
-    background-repeat: no-repeat;
-    background-size: 22px;
-    background-position-x: 10px;
-    background-position-y: center;
-    padding-left:44px;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
-#boton{
+#registro{
+    color: #00B8CE;
+    font-size: 100px;
+    font-family: Bourbon;
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 5px;
+}
 
-    height: 40px;
-    margin-top: 10%;
-    margin-left: 40px;
-    padding:5px 15px;
-    background:#556080;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    color: white;
-    font-size: 20px;
-    font-family:trench;
+
+#pasc{
+margin-left: 24px;
+}
+
+#car{
+  position: absolute;
+  top: 23.5%;
+  right: 28.5%;
+  transform: translateX(35%);
+}
+
+#car_lbl{
+  position: absolute;
+  top: 16%;
+  right: 34.5%;
+  transform: translateX(-100%);
+}
+
+#nom{
+width: 455px;
+}
+
+#submit_btn{
+margin-left:200px;
+color:white;
+font-weight: bold;
+
+}
+
+
+input{
+  border: solid 1px #BEBFC1;
+  border-radius: 0.375em;
+  font-size: 10pt;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+input.entrar:hover{
+    background-color:#3c4358;
+}
+input.registrar:hover{
+    background-color:rgb(1, 118, 131);
 }
 
 input::-webkit-input-placeholder {
      color: black; /*Change the placeholder color*/
      opacity: 0.5; /*Change the opacity between 0 and 1*/
 }
+input[type="text"]:focus,input[type="password"]:focus{
+border: 2px solid #00B8CE;
+}
+
+.error{
+   position: relative;
+   animation: shake 1s;
+  border:2px solid red !important;
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }

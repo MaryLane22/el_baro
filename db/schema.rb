@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180520041028) do
+ActiveRecord::Schema.define(version: 20180529001233) do
 
   create_table "card_payments", force: :cascade do |t|
     t.string   "nombre_propietario"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180520041028) do
   end
 
   create_table "card_transactions", force: :cascade do |t|
-    t.datetime "fecha_transaccion"
+    t.datetime "crated_at"
     t.string   "nombre_propietario"
     t.string   "nombre_banco"
     t.string   "numero_tarjeta"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180520041028) do
     t.integer  "codigo"
     t.float    "monto"
     t.float    "total"
+    t.integer  "user_id"
   end
 
   create_table "oxxo_payments", force: :cascade do |t|
@@ -41,12 +42,13 @@ ActiveRecord::Schema.define(version: 20180520041028) do
   end
 
   create_table "oxxo_transactions", force: :cascade do |t|
-    t.datetime "fecha_transaccion"
+    t.datetime "crated_at"
     t.integer  "codigo_emitido"
     t.integer  "codigo_recibido"
     t.datetime "fecha_vencimiento"
     t.float    "monto"
     t.float    "total"
+    t.integer  "user_id"
   end
 
   create_table "purchase_details", force: :cascade do |t|
@@ -55,10 +57,15 @@ ActiveRecord::Schema.define(version: 20180520041028) do
     t.integer "cantidad"
   end
 
+  create_table "purchase_services", force: :cascade do |t|
+    t.integer "purchase_id"
+    t.integer "service_id"
+  end
+
   create_table "purchases", force: :cascade do |t|
-    t.integer  "nocontrol"
-    t.datetime "fecha_compra"
+    t.datetime "created_at"
     t.integer  "total"
+    t.integer  "user_id"
   end
 
   create_table "services", force: :cascade do |t|
@@ -81,7 +88,7 @@ ActiveRecord::Schema.define(version: 20180520041028) do
     t.string  "password_digest"
     t.string  "carrera"
     t.integer "semestre"
-    t.integer "cant_baros"
+    t.float   "cant_baros"
   end
 
 end

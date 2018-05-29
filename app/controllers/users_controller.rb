@@ -42,7 +42,7 @@ end
 
 
 def show
-   @user_services = @user.services
+   #@user_services = @user.services
 end
 
 private

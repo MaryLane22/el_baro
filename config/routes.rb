@@ -10,6 +10,11 @@ Rails.application.routes.draw do
 #get 'pages/home', to: "pages#home"
 root 'pages#home'
 get 'signup', to: 'users#new'
+
+resources :card_transactions
+resources :oxxo_transactions
+resources :purchases
+resources :services
 #Quiero todas las rutas menos la de new
 resources :users, except: [:new]
 

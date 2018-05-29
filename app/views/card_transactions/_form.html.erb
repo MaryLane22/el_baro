@@ -1,0 +1,85 @@
+<div class='row'>
+<div class='col-xs-12'>
+
+
+  <%= form_for(@ctransaction, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+
+              <div class='form-group'>
+
+                  <div class="control-label col-sm-2">
+                  <%= f.label :nombre_propietario %>
+                   </div>
+                   <div class='col-sm-8'>
+                  <%= f.text_field :nombre_propietario, id: 'correo2', placeholder: 'Nombre propietario', autofocus: true %>
+                  </div>
+
+              </div>
+
+             <div class='form-group'>
+                  <div class="control-label col-sm-2">
+                  <%= f.label :nombre_banco %>
+                  </div>
+                  <div class='col-sm-8'>
+                  <%= f.text_field :nombre_banco,  id: 'correo2', placeholder: 'Tipo de banco '%>
+                  </div>
+              </div>
+
+                  <div class='form-group'>
+                   <div class="control-label col-sm-2">
+                       <%= f.label :numero_tarjeta %>
+                       </div>
+                   <div class='col-sm-8'>
+                       <%= f.text_field :numero_tarjeta,  id: 'correo2', placeholder: '# Tarjeta' %>
+                        </div>
+                  </div>
+
+
+
+                   <div class='form-group'>
+              <div class="control-label col-sm-2">
+                  <%= f.label :fecha_vencimiento %>
+                  </div>
+              <div class='col-sm-8'>
+                  <%= f.text_field :fecha_vencimiento,  id: 'correo2', placeholder: 'Fecha vencimiento' %>
+                   </div>
+                  </div>
+
+                  <div class='form-group'>
+                   <div class="control-label col-sm-2">
+                       <%= f.label :monto %>
+                       </div>
+                   <div class='col-sm-8'>
+                       <%= f.text_field :monto,  id: 'correo2', placeholder: 'Ingresa monto a pagar' %>
+                        </div>
+                       </div>
+
+
+                       <div class='form-group'>
+                        <div class="control-label col-sm-2">
+                            <%= f.label :total %>
+                            </div>
+                        <div class='col-sm-8'>
+                          <%= f.text_field :total, value: :monto*10,  id: 'correo2' %>
+                             </div>
+                            </div>
+
+
+
+
+              <div class='form-group'>
+              <div class='col-sm-offset-2 col-sm-10'>
+                  <!-- Si el usuario no esta registrado el boton dira SIGN UP-->
+                  <!-- Pero si ya esta registrado entonces dira UPDATE -->
+                  <%= f.submit  id: 'boton' %>
+                  </div>
+                  </div>
+
+              <% end %>
+
+
+          <div class='col-xs-4 col-xs-offset-4'>
+              [ <%= link_to "Index" , root_path%> ]
+          </div>
+  </div>
+</div>

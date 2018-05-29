@@ -1,0 +1,18 @@
+<h1 class='center'><%= 'Service: '+@service.nombre %></h1>
+<div align='center'>
+
+  <%= will_paginate @category_article %>
+  <% for item in @service_purchase %>
+
+  <%= item.nombre %>
+  <br>
+<% end %>
+
+
+
+
+</div>
+<!-- <%= render 'articles/article' ,obj: @category_article %>
+<div align='center'>
+  <%= will_paginate @category_article %>
+</div> -->
