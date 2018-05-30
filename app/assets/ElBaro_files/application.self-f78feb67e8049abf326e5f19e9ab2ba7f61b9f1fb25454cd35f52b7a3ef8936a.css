@@ -12,8 +12,9 @@
  *
 
 
- *= require_self
-  *= require sweetalert
-  *= require_tree .
+
+
+
 
  */
+

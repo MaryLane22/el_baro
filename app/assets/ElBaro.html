@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://0.0.0.0:3000/users -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>ElBaro</title>
+  <link rel="stylesheet" media="all" href="./ElBaro_files/application.self-f78feb67e8049abf326e5f19e9ab2ba7f61b9f1fb25454cd35f52b7a3ef8936a.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./ElBaro_files/sweetalert.self-93ae81483be2e9705db4cd911fa410bc2cf6c24f355dc5ac899de49fab854e63.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./ElBaro_files/morris.self-b331eeb1aa336d072d4e7e055fede5e44d00e73a31cfbfa77b87ebf0d816265c.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./ElBaro_files/sidebar.self-20e874b86f4568ef2017d6fb874e60bf90719685656b577241cb04720e15f36a.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./ElBaro_files/style.self-301752e95c836e438a158a40b19135e47ea4aa1afeb7f53eed45444c527f282a.css" data-turbolinks-track="true">
+<link rel="stylesheet" media="all" href="./ElBaro_files/styles.self-b44d0fe1baedd94f79f1657d32b959243b28e6f96260bb4aacc7554a32e89c41.css" data-turbolinks-track="true">
+  <script src="./ElBaro_files/jquery.self-875821d1e3121b366b94ea86a07f3cbc5c76cb16a319bc62212c03a805ff20e9.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/raphael.self-1c6701a1b2ff5e42aedaa3a3387ab44c321e506f05a5f0218904f4cc33e49abb.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/morris.self-4c843f29ec9c0cb662ca9965d26f18262b248d006ee8f11a086d1c1c9b6c45c8.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/sweetalert.self-2f4d106e0b5bd7c2cd59eea258597298f81d0b8ca8eb60b1d1cc6a5c45ac4ba5.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/donut.self-68ce23383576640c5d094c5f94cdca608fc35abcaf8fa21266f21529a9e253f6.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/graficadelinea.self-678de22ee75d7f9b3177607f398db8dc3d18d3d35f4f657e079473982f395b42.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/login.self-0a5f27bffbf5bf9bca5df636f3ad846c8ddab776d2b25383dc333fd5aed517d7.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/reg.self-627aff8235b80a370f1850a4ce71068c34e93b4742fafefbfecf5c4648662a72.js" data-turbolinks-track="true"></script>
+<script src="./ElBaro_files/application.self-5de151d173c12a98f246ba5665e18ff0bf580c64346b70a9e96eeafae8481e44.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Xib7owlf8ySdOmSwEOKHz2sYA5lkQVIwKNzbCS2rbsqdg08FSzQwwh2NgLHcoxnpnCftvrtMqidCGdkRPy9zoQ==">
+</head>
+<body class="imagendefondo">
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+    </div>
+    </div>
+
+
+
+
+    
+        
+         <link rel="stylesheet" media="all" href="./ElBaro_files/styles.self-b44d0fe1baedd94f79f1657d32b959243b28e6f96260bb4aacc7554a32e89c41.css">
+         <link href="./ElBaro_files/sweetalert.css" rel="stylesheet">
+        <script src="./ElBaro_files/sweetalert.min.js"></script>
+
+    
+    
+        <h1 id="registro">Registrate</h1>
+
+
+        <div class="registersection">
+
+          <form class="form-horizontal" role="form" id="new_user" action="http://0.0.0.0:3000/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Xib7owlf8ySdOmSwEOKHz2sYA5lkQVIwKNzbCS2rbsqdg08FSzQwwh2NgLHcoxnpnCftvrtMqidCGdkRPy9zoQ==">
+
+
+          <p class="parrafos">Nombre:</p><br>
+          <div class="field_with_errors"><input placeholder="Nombre" class="el" id="nom" type="text" value="" name="user[nombre]"></div><br><br>
+
+          <p class="parrafos">No.Control:</p><br>
+          <div class="field_with_errors"><input placeholder="Ejemplo: 14623009 " class="el" id="num" type="text" value="" name="user[nocontrol]"></div><br><br>
+
+            <p class="parrafos" ,="" id="car_lbl">Carrera:</p>
+           <div class="field_with_errors"><input placeholder="Carrera" class="el" id="car" type="text" value="" name="user[carrera]"></div>
+
+           <p class="parrafos">Semestre:</p><br>
+           <div class="field_with_errors"><input placeholder="Semestre" class="el" id="sem" type="text" value="" name="user[semestre]"></div><br><br>
+
+
+          <p class="parrafos">Usuario:</p><br>
+          <div class="field_with_errors"><input placeholder="Usuario" class="el" id="usu" type="text" value="" name="user[usuario]"></div><br><br>
+
+          <p class="parrafos">Contraseña:</p><br>
+          <div class="field_with_errors"><input placeholder="Contraseña" class="el input" id="pas" onclick="remove_class_reg();" type="password" name="user[password]"></div>
+           <input type="password" name="nom" id="pasc" placeholder="Confirmar contraseña" class="el input" onclick="remove_class_reg();"><br><br>
+          <a class="parrafos">*La contraseña debe ser de minimo <strong>8 digitos</strong> y debe contener un <strong>digito</strong> y una letra <strong>mayuscula</strong></a><br>
+
+          <input type="submit" name="commit" value="Registrarse!" class="registrar" id="submit_btn" onclick="vregistro();">
+
+</form>
+
+      </div>
+
+
+        <!-- SCRIPTS -->
+        s
+        <script src="./ElBaro_files/reg.self-627aff8235b80a370f1850a4ce71068c34e93b4742fafefbfecf5c4648662a72.js"></script>
+
+
+
+    
+
+
+
+
+
+</body></html>

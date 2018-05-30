@@ -11,6 +11,9 @@ gem 'rails', '4.2.6'
 gem 'sqlite3'
 
 
+gem 'sweetalert-rails'
+
+
 
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'

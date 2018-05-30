@@ -19,8 +19,15 @@ class UsersController < ApplicationController
       redirect_to root_path
       #redirect_to user_path(@user)
     else
-      flash[:danger]="NEL PERRO "
-      render 'show'
+
+    redirect_to login_path
+
+      #sweetalert_error('Hubo un error con tu informacion', 'Oops!', persistent: 'OK!');
+      #sweetalert('Hubo un error con tu informacion', 'Oops!', persistent: 'OK!');
+
+
+      #redirect_to signup_path
+      #render 'show'
 
       #render 'new'
     end

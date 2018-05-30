@@ -1,0 +1,310 @@
+@font-face {
+  font-family: 'fontawesome-webfont';
+  src: url(/assets/fontawesome-webfont-ae19e2e4c04f2b04bf030684c4c1db8faf5c8fe3ee03d1e0c409046608b38912.ttf);
+}
+@font-face {
+  font-family: 'trench';
+  src: url(/assets/trench-e4ed69369d2919786bb0dce2caa5e96083b4fc832aefac13d9e212f2521814ab.otf);
+}
+@font-face {
+  font-family: 'Bourbon';
+  src: url("/assets/Bourbon-7f04b09590418b6ef4573bb8249c999437121658f6b62f6281c92990ebccc3e6.otf");
+}
+/* line 14, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+body.imagendefondo {
+  background-image: url(/assets/back-940a12a77fb86720a36ffa7534ba06c6f1d43442ed0d01621048826b8c3fe835.jpg);
+  background-size: 1390px;
+  background-position-y: -220px;
+}
+
+/* line 20, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+h1 {
+  color: #00B8CE;
+  font-size: 140px;
+  font-family: 'Bourbon';
+  margin-left: 77px;
+  margin-top: 80px;
+  margin-bottom: 0%;
+  box-sizing: border-box;
+}
+
+/* line 31, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+p {
+  display: inline;
+}
+
+/* line 35, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+a:-webkit-any-link {
+  color: black;
+  cursor: auto;
+  text-decoration: none;
+}
+
+/* line 42, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.parrafos {
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+/* line 50, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.section {
+  width: 300px;
+  height: 310px;
+  position: absolute;
+  top: 65%;
+  left: 84%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 65, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.registersection {
+  width: 740px;
+  height: 460px;
+  top: 60%;
+  left: 50%;
+  padding: 20px;
+  padding-left: 90px;
+  padding-right: 120px;
+  background-color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/* line 81, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.entrar {
+  height: 40px;
+  margin-left: 3%;
+  padding: 3px 10px;
+  background: #556080;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+  margin-top: 2%;
+}
+
+/* line 98, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.registrar {
+  height: 40px;
+  margin-left: 5px;
+  padding: 2px 8px;
+  background: #00B8CE;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+  margin-top: 2%;
+}
+
+/* line 116, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.registrar_submit_button {
+  height: 40px;
+  margin-top: 10%;
+  margin-left: 5px;
+  padding: 2px 8px;
+  background: #00B8CE;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+/* line 135, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.registrarse {
+  height: 40px;
+  margin-top: 10%;
+  margin-left: 280px;
+  padding: 2px 8px;
+  background: #00B8CE;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  color: black;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline;
+}
+
+/* line 153, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.el {
+  height: 23px;
+  width: 190px;
+  opacity: .6;
+  padding-left: 44px;
+}
+
+/* line 160, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.missing_info_alert {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: red;
+  visibility: hidden;
+}
+
+/* line 170, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#li_avatar {
+  margin-left: 80px;
+  width: 95px;
+  height: 100px;
+}
+
+/* line 177, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+form {
+  margin-top: 1%;
+  margin-left: 20px;
+}
+
+/* line 182, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.forma2 {
+  margin-left: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+/* line 190, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#usuario {
+  height: 23px;
+  width: 170px;
+  opacity: .6;
+  background-image: url(/assets/username-acac536901cd12be7b8bb55e9bd63c2deaaddbd4c9a6a5c520a1cec9bbad0a4b.png);
+  background-repeat: no-repeat;
+  background-size: 36px;
+  background-position-x: 5px;
+  background-position-y: center;
+  padding-left: 44px;
+  margin-bottom: 1%;
+}
+
+/* line 204, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#contrasena {
+  height: 23px;
+  width: 170px;
+  opacity: .6;
+  background-image: url(/assets/password-e40139dddd5984974e0e1bcb7ce6b7cdb2d8fb32a78b94d2ba7dafaf1b78cdef.png);
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position-x: 10px;
+  background-position-y: center;
+  padding-left: 44px;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+/* line 218, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#registro {
+  color: #00B8CE;
+  font-size: 100px;
+  font-family: Bourbon;
+  text-align: center;
+  margin-top: 60px;
+  margin-left: 5px;
+}
+
+/* line 228, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#pasc {
+  margin-left: 24px;
+}
+
+/* line 232, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#car {
+  position: absolute;
+  top: 23.5%;
+  right: 28.5%;
+  transform: translateX(35%);
+}
+
+/* line 239, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#car_lbl {
+  position: absolute;
+  top: 16%;
+  right: 34.5%;
+  transform: translateX(-100%);
+}
+
+/* line 246, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#nom {
+  width: 455px;
+}
+
+/* line 250, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+#submit_btn {
+  margin-left: 200px;
+  color: white;
+  font-weight: bold;
+}
+
+/* line 258, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+input {
+  border: solid 1px #BEBFC1;
+  border-radius: 0.375em;
+  font-size: 10pt;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 266, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+input.entrar:hover {
+  background-color: #3c4358;
+}
+
+/* line 269, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+input.registrar:hover {
+  background-color: #017683;
+}
+
+/* line 273, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+input::-webkit-input-placeholder {
+  color: black;
+  /*Change the placeholder color*/
+  opacity: 0.5;
+  /*Change the opacity between 0 and 1*/
+}
+
+/* line 277, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+input[type="text"]:focus, input[type="password"]:focus {
+  border: 2px solid #00B8CE;
+}
+
+/* line 281, /home/marisol/adminredes/el_baro/app/assets/stylesheets/styles.css.scss */
+.error {
+  position: relative;
+  animation: shake 1s;
+  border: 2px solid red !important;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

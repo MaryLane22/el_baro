@@ -1,6 +1,90 @@
-<h1>hellow</h1
-  <h4 align = "center">Welcome<%= @user.usuario%></h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>elbaro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-  <%= link_to "Comprar baros con tarjeta", new_card_transaction_path %>
-  <%= link_to "Comprar baros con oxxo", new_oxxo_transaction_path %>
-  <%= link_to "comprar servicios", new_purchase_path %>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="sidebar.css">
+
+
+
+</head>
+<body id="background_color">
+  <div id="wrapper">
+
+    <!-- Sidebar-->
+    <div id="sidebar-wrapper">
+      <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
+      <ul class="sidebar-nav">
+        <li><a>Mi cartera</a></li>
+        <li><a>Servicios</a></li>
+        <li><a>Forma de pago</a></li>
+        <li><a>Compras</a></li>
+        <li><a>Configuracion de cuenta</a></li>
+        <li><a>Cerrar sesión</a></li>
+      </ul>
+    </div>
+
+    <!-- Page content-->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <%= image_tag("menu.png", :alt =>"menu" , id:"m",onclick: "togg();") %>
+
+             <!--Grafica de lineas-->
+                <div class="container">
+                  <h3 class="titulo"><strong>Mi</strong> cartera</h3>
+                  <hr class="title-hr">
+                  <div class="row">
+                    <div class="col-md-8" >
+                      <h3 class="subtitulo">Estadisticas</h3><hr>
+                      <div class="graphs" id="myfirstchart"></div>
+                    </div>
+                    <div class="col-md-4 noticias" >
+                      <div class="info-box" id="entradas">
+                        <h1 class="cant-notic"><strong>5.6</strong><h1><h3 class="lbl-notic">BAROS<h3>
+                        <p class="descripcion-notic">Monto actual</p>
+                      </div>
+                      <div class="info-box" id="salidas">
+                        <h1 class="cant-notic"><strong>3.6</strong><h1><h3 class="lbl-notic">BAROS<h3>
+                        <p class="descripcion-notic">Ultimo retiro</p>
+                      </div>
+                      <div id="donut-example"></div>
+
+
+                    </div>
+                  </div>
+
+
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+  <!--Menu toggle script -->
+ <script>
+   function togg(){
+   $("#wrapper").toggleClass("menuDisplayed"); }
+ </script>
+
+ <script src="/morris.min.js"></script>
+
+
+
+
+
+</body>
+</html>
