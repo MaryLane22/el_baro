@@ -4,7 +4,7 @@ class OxxoTransaction < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :codigo_emitido, presence: true,
-  length:  {minimum: 6, maximum: 6}
+  length:  {minimum: 6, maximum: 8}
 
 
 

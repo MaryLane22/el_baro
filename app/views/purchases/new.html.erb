@@ -1,3 +1,4 @@
+
 <div class='row'>
   <div class='col-xs-12'>
     <%= form_for(@purchase,:html => {class:'form-horizontal',role:'form'}) do |f| %>
@@ -6,13 +7,17 @@
 <div class='form-group'>
   <div class='row'>
     <div class='col-sm-offset-2 col-ms-8'>
-      <%= f.collection_check_boxes :service_ids,Service.all, :id, :nombre do |cb| %>
-        <% cb.label(class:'checkbox-inline input_checkbox'){cb.check_box(class:'checkbox')+cb.text} %>
+      <%= f.collection_check_boxes :service_ids, Service.all, :id, :nombre do |cb| %>
+        <% cb.label(class:'checkbox-inline input_checkbox', id: "lbl"){cb.check_box(class:'checkbox', id: "chk")+cb.text} %>
+
       <% end %>
     </div>
   </div>
 </div>
 
+<br>
+<br>
+<br>
 <div class='form-group'>
       <div class='control-label col-sm-2'>
         <%= f.label :total %>
@@ -34,3 +39,13 @@
 
 </div>
 </div>
+
+<script>
+$('document').ready(function(){
+ //document.getElementById("lbl").style.visibility = "visible";
+  document.getElementById("chk").style.visibility = "visible";
+
+
+});
+
+</script>
