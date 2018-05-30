@@ -31,7 +31,7 @@ class CardTransactionsController < ApplicationController
            tipo_cambio=10
            #@ctlast = CardTransaction.last
            c_baros = ctransaction_params[:monto].to_f / tipo_cambio
-           cbt = 0.0@otransaction=OxxoTransaction.new
+           cbt = 0.0
            cbt = c_baros + @user.cant_baros.to_f
            #Aumentar la cantidad de baros al usuario
            @user.update_attribute(:cant_baros, cbt)
@@ -64,7 +64,7 @@ class CardTransactionsController < ApplicationController
 
 
   def ctransaction_params
-      params.require(:card_transaction).permit(:nombre_propietario,:nombre_banco,:numero_tarjeta,:fecha_vencimiento,
+      params.require(:card_transaction).permit(:nombre_propietario,:numero_tarjeta,:fecha_vencimiento,
       :codigo,:monto,:total)
   end
 

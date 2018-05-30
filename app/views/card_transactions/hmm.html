@@ -12,8 +12,9 @@
   <link href="css/bootstrap.min.css" rel="stylesheet"/>
   <link href="css/font-awesome.min.css" rel="stylesheet"/>
   <link href="style.css" rel="stylesheet"/>
+  <%= stylesheet_link_tag    'styles', media: 'all' %>
+
   <link rel="stylesheet" href="sidebar.css">
-    <%= stylesheet_link_tag    'styles', media: 'all' %>
 </head>
 <body id="background_color">
   <div id="wrapper">
@@ -22,7 +23,10 @@
     <div id="sidebar-wrapper">
       <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
       <ul class="sidebar-nav">
-
+        <li>Mi cartera</li>
+        <li><a>Servicios</a></li>
+        <li><a>Compras</a></li>
+        <li>Configuración de cuenta</li>
         <li><a>Cerrar sesión</a></li>
       </ul>
     </div>
@@ -46,10 +50,7 @@
                   <div class="container">
                       <!-- <form action="save.php" method="post"> -->
 
-
-                        <%= form_for(@ctransaction, :html => {class: "form-horizontal", role: "form"}, id: "forma3") do |f| %>
-
-                          <div class="wizards" style="margin-top:50px;">
+                          <div class="wizards">
                               <div class="progressbar">
                                   <div class="progress-line" data-now-value="12.11" data-number-of-steps="5" style="width: 12.11%; z-index:-1;"></div> <!-- 19.66% -->
                               </div>
@@ -92,6 +93,11 @@
                           </fieldset>
                           <fieldset>
                               <h4>Información de la cuenta</h4>
+
+                    <%= form_for(@ctransaction, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+
+
                               <div class="form-group">
                                   <label style="margin-top:20px;">Nombre del tarjetahabiente</label>
                                   <%= f.text_field :nombre_propietario,placeholder:'Nombre',class: 'form-control',type:'text'%>
@@ -104,7 +110,7 @@
                               </div>
                               <div class="form-group">
                                   <label>Fecha de expiración</label>
-                                  <%= f.text_field :fecha_vencimiento,placeholder:'Número de tarjeta',class:'form-control',type:'text' %>
+                                  <%= f.text_field :fecha_vencimiento,placeholder:'Número de tarjeta',class:'form-control',type:'date' %>
                                   <!--<input type="date" name="fechadeexpiracion"  novalidate class="form-control" /> -->
                               </div>
                               <div class="form-group">
@@ -112,6 +118,8 @@
                                   <%=f.text_field :codigo ,placeholder:'CVC',class:'form-control',type:'text' %>
                                   <!--<input type="text" name="CVC" class="form-control" placeholder="CVC"/>-->
                               </div>
+
+
 
 
 
@@ -127,10 +135,10 @@
                               </div>
                               <div class="wizard-buttons">
                                   <button type="button" class="btn btn-previous" style="color: #797A7A">Anterior</button>
-                                  <%= f.submit name: "save" , class: "btn btn-primary btn-submit" %>
+                                  <button type="submit" name="save" class="btn btn-primary btn-submit">Enviar</button>
                               </div>
                           </fieldset>
-                       <!-- CERRANDO EL FORM-->
+
                   </div>
 
               <!--AQUI TERMINA -->
@@ -142,12 +150,11 @@
                   <h3 class="center-elements-conversion"><strong>Conversión de divisas</strong></h3>
                   <h4 class="center-elements-conversion">Pesos / Baros</h4><br>
                   <h6 id="inner-oxxo-paso1">Pesos:</h6>
-                  <%= f.text_field :monto, id: "money", placeholder:"Cantidad de baros a cambiar",class:"el", id: 'money'%>
+                  <%= f.text_field :monto,placeholder:"Cantidad de baros a cambiar",class:"el", id: 'money'%>
                   <%= image_tag("convert.png", :alt =>"editar",id:'convert_button',onclick:"calcular();") %><br>
                   <hr>
-                  <p class="barr" id="b">BAROS: </p>
-                  <p class="barr" id="demo"></p><%= f.text_field :total, id: "totl",class:"el" %>
-
+                  <p class="barr" id="b">BAROS: </p><br><br><br>
+                  <p class="barr" id="b"></p><%= f.text_field :total,class:"el", id: "totl"%>
                   <br>
                   <br>
                   <br>
@@ -157,7 +164,8 @@
               <!-- FIN DE PASO 1 -->
 
 
-              <% end %>
+
+                <% end %>  <!-- CERRANDO EL FORM-->
 
           </div>
         </div>
@@ -189,7 +197,8 @@
  <script src="js/popper.min.js"></script>
  <script src="js/bootstrap.min.js"></script>
  <script src="script.js"></script>
- <script type="text/javascript" src="javascript/conv.js"></script>
+
+<%= javascript_include_tag 'conv'%>
 
 
 </body>

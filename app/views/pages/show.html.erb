@@ -1,2 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>elbaro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+
+   <%= stylesheet_link_tag    'sidebar', media: 'all' %>
+
+
+
+</head>
+<body id="background_color">
+  <div id="wrapper">
+
+    <!-- Sidebar-->
+    <div id="sidebar-wrapper">
+      <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
+      <ul class="sidebar-nav">
+        <li>Mi cartera</li>
+        <li><a>Servicios</a></li>
+        <li><%= link_to "Comprar baros", page_path%></li>
+        <li><a>Compras</a></li>
+        <li>Configuración de cuenta</li>
+        <li><a>Cerrar sesión</a></li>
+      </ul>
+    </div>
+
+    <!-- Page content-->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <%= image_tag("menu.png", :alt =>"menu" , id:"m",onclick: "togg();") %>
+            <div class="col-lg-12">
+              <div class="container">
+                <h3 class="titulo"><strong>Forma</strong> de pago</h3>
+                <hr class="title-hr">
+              </div>
+            </div>
+            <div class="col-lg-8 container x">
+
+                <div class="field" id="fisica" onclick="fisica();">
+                  <%= image_tag("visa.png", :alt =>"visa" ,class:'imagenes', id:"visa")%>
+                  <%= image_tag("next-arrow2.png", :alt =>"next" , id:"mow")%>
+                </div>
+
+              <%= link_to new_oxxo_transaction_path  do%>
+                <div class="field">
+                  <%= image_tag("oxxo.png", :alt =>"oxxo" ,class:'imagenes', id:"oxxo")%>
+                  <%= image_tag("next-arrow2.png", :alt =>"next" , id:"mow")%>
+                </div>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+  <!--Menu toggle script -->
+ <script>
+   function togg(){
+   $("#wrapper").toggleClass("menuDisplayed"); }
+ </script>
+
+ <script>
+ $(document).ready(function(){
+     $(".field").hover(function(){
+         $(this).css("width", "400px");
+         $(this).css("transition", "0.3s");
+         }, function(){
+         $(this).css("width", "500px");
+     });
+ });
+ </script>
+
+
+ <script>
+function fisica(){
+ var newtab;
+ newtab= window.location.replace("/card_transactions/new");
+ newtab.document.location.reload(true);
+
+}
+ </script>
+
+
+
+
+ <script src="/morris.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+
+<br>
+<br>
 <%= link_to "Comprar baros con tarjeta", new_card_transaction_path %>
-<%= link_to "Comprar baros con oxxo", new_oxxo_transaction_path
+<%= link_to "Comprar baros con oxxo", new_oxxo_transaction_path %>

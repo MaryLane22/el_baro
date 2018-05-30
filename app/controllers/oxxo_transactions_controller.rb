@@ -51,6 +51,7 @@ class OxxoTransactionsController < ApplicationController
             @lct = OxxoTransaction.last
             c_baros = @lct.monto.to_f / tipo_cambio
             cbt = 0.0
+
             cbt = c_baros + @user.cant_baros.to_f
             #Aumentar la cantidad de baros al usuario
             @user.update_attribute(:cant_baros, cbt)
@@ -88,7 +89,7 @@ class OxxoTransactionsController < ApplicationController
 
 
   def otransaction_params
-      params.require(:oxxo_transaction).permit(:codigo_emitido, :monto)
+      params.require(:oxxo_transaction).permit(:codigo_emitido, :monto, :total)
   end
 
 

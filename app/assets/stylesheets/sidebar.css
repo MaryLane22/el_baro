@@ -52,7 +52,6 @@ color: #8B8C8C;
 font-weight: bold;
 font-family: 'Quicksand', sans-serif;
 margin: 0;
-
 }
 
 .title-hr{
@@ -134,7 +133,7 @@ width: 660px;
 height: 250px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 70px;
+margin-top: 60px;
 padding: 23px;
 position: absolute;
 }
@@ -174,7 +173,7 @@ position: absolute;
   height: 280px;
   margin: 0;
   padding: 10px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -206,4 +205,38 @@ position: absolute;
 .sidebar-nav li a:hover{
   background: #BBECF2;
   border-left: 4px solid #00B8CE;
+}
+
+/*Styling forma de pago*/
+
+.imagenes{
+width: 260px;
+height: 80px;
+margin-left:auto;
+margin-right: auto;
+}
+
+.x{
+  margin: 70px;
+}
+
+
+.field{
+  width: 500px;
+  padding: 20px;
+  border: solid 1px #DCDCDE;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  background-color: white;
+
+}
+
+#mow{
+  width:100px;
+  height: 97px;
+  margin-top: -10px;
+  margin-left: 120px;
+  position:absolute;
+  opacity: 0.5;
 }

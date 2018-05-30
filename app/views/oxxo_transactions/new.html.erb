@@ -1,60 +1,120 @@
 <!DOCTYPE html>
-<html>
-    <head>
-<meta charset="utf-8">
- <%= stylesheet_link_tag    'style', media: 'all' %>
-</head>
-
-<body>
-
-  <div class='row'>
-  <div class='col-xs-12'>
-
-
-    <%= form_for(@otransaction, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-
+<html lang="en">
+  <head>
+    <title>elbaro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
+    <%= stylesheet_link_tag    'styles', media: 'all' %>
 
 
-                    <div class='form-group'>
-                     <div class="control-label col-sm-2">
-                         <%= f.label :codigo_emitido %>
-                         </div>
-                     <div class='col-sm-8'>
-                         <%= f.text_field :codigo_emitido,  id: 'correo2', placeholder: 'Ingresa el codigo' %>
+  </head>
+  <body id="background_color">
+    <div id="wrapper">
+
+      <!-- Sidebar-->
+      <div id="sidebar-wrapper">
+        <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
+        <ul class="sidebar-nav">
+
+          <li><a>Cerrar sesión</a></li>
+        </ul>
+      </div>
+
+      <!-- Page content-->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <%= image_tag("menu.png", :alt =>"menu" , id:"m",onclick: "togg();") %>
+
+               <!--Grafica de lineas-->
+                  <div class="container">
+                    <h3 class="titulo">Forma de pago <strong>OXXO</strong></h3>
+                    <hr class="title-hr">
+                    <div class="row">
+                      <div class="col-md-12" >
+
+
+
+
+
+
+
+
+                        <div id="inner-oxxo-form">
+                            <%= image_tag("oxxo.png", :alt =>"oxxo", id:"inner-oxxo-image") %>
+                        </div>
+
+                        <%= form_for(@otransaction, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+
+                        <div id="oxxo-form">
+                          <div id="paso2"style="height:450px;">
+                            <h3 id="inner-oxxo-lbl">Referencia:</h3>
+                            <div id="area-1">
+                              <%= f.text_field :codigo_emitido,class:"el", type: 'text', id: "c_e"%>
+
+                            </div>
+
+                            <h6 id="inner-oxxo-instrucc">INSTRUCCIONES</h6>
+                            <div id="area-2">
+                              <p>1.- Acude a la tienda OXXO más cercana.</p><br>
+                              <p>2.- Indica en la caja que quieres realizar un pago <strong>OXXOPay.</strong></p><br>
+                              <p>3.- Dicta al cajero el número de referencia en esta fiha para que tecleé directamente en la pantalla de venta.</p><br>
+                              <p>4.- Realiza el pago correspondiente con dinero en efectivo.</p><br>
+                              <p>5.- Para confirmar tu pago en la plataforma, el cajero te entregará un comprobante impreso.</p><br>
+                              <p><strong>Teclea ese numero de verificacion aqui.</strong></p>
+                            </div>
+                            <div style="margin-top:48px; margin-left:11.5%; ">
+                              <%= f.submit name: "Procesar" , class: "btn btn-primary btn-submit" %>
+                            </div>
                           </div>
-                         </div>
+                          <div id="paso1"> <!-- Inicio de paso 1-->
+                              <h3 class="center-elements-conversion"><strong>Conversión de divisas</strong></h3>
+                              <h4 class="center-elements-conversion">Pesos / Baros</h4><br>
+                              <h6 id="inner-oxxo-paso1">Pesos:</h6>
+                              <%= f.text_field :monto,placeholder:"Cantidad de baros a cambiar",class:"el", id: 'money'%>
+                              <%= image_tag("convert.png", :alt =>"editar",id:'convert_button',onclick:"calcular();") %><br>
+                              <hr>
+                              <p class="barr" id="b">BAROS: </p>
+                              <p class="barr" id="demo"></p><%= f.text_field :total, id: "totl",class:"el" %>
 
-                    <div class='form-group'>
-                     <div class="control-label col-sm-2">
-                         <%= f.label :monto %>
-                         </div>
-                     <div class='col-sm-8'>
-                         <%= f.text_field :monto,  id: 'monto', placeholder: 'Ingresa monto a pagar' %>
+                              <br>
+                              <br>
+                              <br>
+                              <button type="button" id="continuarconversion" class="btn btn-primary" style="margin-left:46%; margin-top:3%; visibility:hidden;" onclick="mostrarpaso2();">Continuar</button>
+                              <hr>
+                            </div> <!-- Fin de  paso 1-->
+                        </div> <!-- Fin de oxxo form-->
 
+                        <% end %>
 
-                          </div>
-                         </div>
+                      </div>
+                    </div> <!-- Fin de row-->
 
+                  </div>
 
-
-
-                <div class='form-group'>
-                <div class='col-sm-offset-2 col-sm-10'>
-                    <!-- Si el usuario no esta registrado el boton dira SIGN UP-->
-                    <!-- Pero si ya esta registrado entonces dira UPDATE -->
-                    <%= f.submit  id: 'boton' %>
-                    </div>
-                    </div>
-
-                <% end %>
-
-
-            <div class='col-xs-4 col-xs-offset-4'>
-                [ <%= link_to "Index" , root_path%> ]
             </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
 
 
-</body>
+    <!--Menu toggle script -->
+   <script>
+     function togg(){
+     $("#wrapper").toggleClass("menuDisplayed"); };
+   </script>
+
+  <script type="text/javascript" src="javascript/conv.js"></script>
+
+  </body>
 </html>

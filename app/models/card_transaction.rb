@@ -4,7 +4,7 @@ class CardTransaction < ActiveRecord::Base
 
 
   validates   :nombre_propietario, presence: true
-  validates   :nombre_banco, presence: true
+  
   validates   :fecha_vencimiento, presence: true
   validates   :monto, presence: true
 

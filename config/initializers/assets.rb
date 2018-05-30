@@ -4,9 +4,12 @@
 Rails.application.config.assets.version = '1.0'
 #Rails.application.config.assets.precompile += %w( styles.css )
 Rails.application.config.assets.precompile += %w(styles.css.scss)
+Rails.application.config.assets.precompile += %w(styles.css.scss)
 Rails.application.config.assets.precompile += %w( login.js )
 Rails.application.config.assets.precompile += %w( jquery.js )
-Rails.application.config.assets.precompile += %w( reg )
+Rails.application.config.assets.precompile += %w( sidebar.css )
+
+Rails.application.config.assets.precompile += %w( conv.js )
 
 
 # Add additional assets to the asset load path

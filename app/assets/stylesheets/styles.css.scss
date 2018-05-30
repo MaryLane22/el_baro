@@ -17,12 +17,12 @@ body.imagendefondo {
      background-position-y:-220px;
 }
 
-h1{
+.titulogrande{
    color: #00B8CE;
-   font-size: 140px;
-   font-family: 'Bourbon';
-   margin-left: 77px;
-   margin-top: 80px;
+   font-size: 140px !important;
+   font-family: 'Bourbon'!important;
+   margin-left: 86px!important;
+   margin-top: 87px !important;
    margin-bottom: 0%;
    box-sizing: border-box;
 
@@ -45,8 +45,6 @@ a:-webkit-any-link {
   font-size: 15px;
 }
 
-
-
 .section{
     width:300px;
     height:310px;
@@ -63,8 +61,8 @@ a:-webkit-any-link {
 }
 
 .registersection{
-    width:740px;
-    height:460px;
+    width:700px;
+    height:480px;
     top: 60%;
     left: 50%;
     padding: 20px;
@@ -79,7 +77,6 @@ a:-webkit-any-link {
 }
 
 .entrar{
-
     height: 40px;
     margin-left: 3%;
     padding:3px 10px;
@@ -92,11 +89,10 @@ a:-webkit-any-link {
     font-size: 15px;
     font-family:Arial, Helvetica, sans-serif;
     display:inline;
-    margin-top: 2%;
+    margin-top: 2% !important;
 }
 
 .registrar{
-
     height: 40px;
     margin-left: 5px;
     padding:2px 8px;
@@ -109,7 +105,7 @@ a:-webkit-any-link {
     font-size: 15px;
     font-family:Arial, Helvetica, sans-serif;
     display:inline;
-    margin-top: 2%;
+    margin-top: 2% !important;
 
 }
 
@@ -151,17 +147,18 @@ a:-webkit-any-link {
 }
 
 .el{
+    width: 200px;
     height:23px;
-    width: 190px;
     opacity:.6;
-    padding-left:44px;
+    padding-left:10px;
 }
 
 .missing_info_alert{
     font-family: Arial, Helvetica, sans-serif;
     font-size:15px;
-    color:red;
+    color:red !important;
     visibility: hidden;
+    margin-top: -10px;
 
 }
 
@@ -187,9 +184,8 @@ form{
 
 
 
-#usuario{
-    height:23px;
-    width: 170px;
+#usuariolog{
+    height: 27px !important;
     opacity:.6;
     background-image: image-url('username.png');
     background-repeat: no-repeat;
@@ -198,12 +194,12 @@ form{
     background-position-y: center;
     padding-left:44px;
     margin-bottom: 1%;
+    margin-top: 12px !important;
 
 
 }
-#contrasena{
-    height:23px;
-    width: 170px;
+#contrasenalog{
+    height: 27px !important;
     opacity:.6;
     background-image: image-url('password.png');
     background-repeat: no-repeat;
@@ -211,8 +207,7 @@ form{
     background-position-x: 10px;
     background-position-y: center;
     padding-left:44px;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 #registro{
@@ -220,39 +215,43 @@ form{
     font-size: 100px;
     font-family: Bourbon;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
     margin-left: 5px;
 }
 
 
 #pasc{
-margin-left: 24px;
+margin-left: 55px;
+height: 24.5px;
 }
 
 #car{
   position: absolute;
   top: 23.5%;
-  right: 28.5%;
+  right: 29%;
   transform: translateX(35%);
 }
 
 #car_lbl{
   position: absolute;
-  top: 16%;
-  right: 34.5%;
-  transform: translateX(-100%);
+  top: 19%;
+  right: 36%;
+  transform: translateX(-43%);
 }
 
 #nom{
 width: 455px;
+margin-bottom: 15px;
 }
 
 #submit_btn{
 margin-left:200px;
 color:white;
 font-weight: bold;
+margin-top: 2px !important;
 
 }
+
 
 
 input{
@@ -301,3 +300,167 @@ border: 2px solid #00B8CE;
       transform: translate3d(4px, 0, 0);
     }
   }
+
+
+/* STYLING THE OXXOPAY PAGE*/
+
+#oxxo-form{
+  background-color:#F8F9FB;
+  border: solid #D3D4D8;
+  width: 70%;
+  height: 450px;
+  margin-left: 18%;
+  margin-top: 70px;
+  border-radius: 14px;
+}
+
+#inner-oxxo-form{
+  background-color:white;
+  width: 24.5%;
+  height: 50px;
+  margin-left: 38.5%;
+  margin-top: 30px;
+  border-radius: 14px;
+  position: absolute;
+}
+
+#inner-oxxo-image{
+width:90%;
+height: 74px;
+margin-left: 18px;
+}
+
+#inner-oxxo-lbl{
+margin-left: 29%;
+margin-top: 60px;
+}
+#inner-oxxo-p{
+margin-top: 5px;
+text-align: center;
+}
+
+#inner-oxxo-instrucc{
+  margin-left: 6%;
+  margin-top: 2%;
+}
+
+#area-1{
+  background-color: white;
+  width:40%;
+  height:40px;
+  margin-left: 29%;
+  padding:0;
+  border-radius: 14px;
+  border: solid  0.2px #D3D4D8;
+}
+
+#area-2{
+  background-color: white;
+  width: 90%;
+  padding:10px;
+  border-radius: 14px;
+  border: solid  0.2px #D3D4D8;
+  margin-left: 5%;
+}
+
+#area3{
+  background-color: white;
+  width:25% !important;
+  height:25px;
+  border-radius: 14px;
+  border: solid  0.2px #D3D4D8;
+  display:inline;
+  margin-left: 1%;
+  margin-top:-1.5px;
+}
+#enter{
+display:inline;
+float: rigth;
+width: 25px;
+height: 25px;
+margin-left: 2%
+}
+
+
+.center-elements-conversion{
+  text-align: center;
+}
+#paso2{
+  visibility: hidden;
+}
+
+#paso1{
+background-color: #F8F9FB;
+height:70%;
+width: 63%;
+position:absolute;
+transform:translate(3%,-124%);
+z-index:2;
+}
+#inner-oxxo-paso1{
+margin-left: 28%;
+margin-top: 10%;
+display:inline;
+font-size:18px;
+}
+#convert_button{
+  width: 40px;
+  height: 40px;
+  margin-left: 3%;
+}
+
+
+h3.center-elements-conversion{
+  color:#1D5483;
+}
+
+.barr{
+  display: block;
+  float: right;
+  position: absolute;
+  font-size: 50px;
+  margin-left: 30%;
+}
+
+#b{
+  color: #3F6386;
+}
+#demo{
+ margin-left: 60%;
+}
+
+#paso1_visa{
+background-color: #F8F9FB;
+height:400px;
+width: 63%;
+position: absolute;
+z-index:2;
+transform: translate(30%,20%);
+border: solid #D3D4D8;
+}
+
+#paso2_visa{
+  visibility: hidden;
+}
+
+
+/* STYLING THE CONFIGURAR CUENTA PAGE*/
+.configurar-fields{
+display: inline-block;
+width: 100%;
+height: 30px;
+margin-bottom: 15px;
+}
+
+form.uu{
+  margin-left: 0% !important;
+}
+
+#actualizar-btn{
+  visibility: hidden;
+}
+
+.bloquear{
+  pointer-events: none;
+  background-color: #F2F2EE;
+}
