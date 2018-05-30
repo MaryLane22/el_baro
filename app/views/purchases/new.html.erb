@@ -165,19 +165,18 @@
                     <div class="col-lg-12 centrar"style="border: solid 1px #D3D4D8; margin-top:10px; border-radius:3px;">
                         <div id="botones_selec">
                         </div>
-                        <div id="totalix" style="transform:translateY(350%);">
+                        <%= form_for(@purchase,:html => {id:'forma7',style:" width:360px; margin-left:40%;"}) do |f| %>
+
+                        <div id="totalix" style="transform:translateY(350%);">                         
 
 
+                          <%= f.collection_check_boxes :service_ids,Service.all, :id, :nombre do |cb| %>
+                            <% cb.label(class:'checkbox-inline input_checkbox'){cb.check_box(class:'checkbox')+cb.text} %>
+                          <% end %>
 
-
-
-
-
-
-                          <%= form_for(@otransaction, :html => {id:'forma7',style:" width:360px; margin-left:40%;"}) do |f| %>
                             <p class='parrafos'style="transform:translate(-10%,-24%); position:absolute;" >Total:</p>
                             <%= f.text_field :total ,id: 'moneybags',placeholder:'Total',class: 'el bservicios',style:"position:relative; display:inline;"%>
-                            <%=  f.submit, class:'registrar',id:'term',style:"position:relative; color: white; margin-bottom:40px;"%>
+                            <%=  f.submit class:'registrar',id:'term',style:"position:relative; color: white; margin-bottom:40px;"%>
                           <% end %>
                         </div>
                     </div>
