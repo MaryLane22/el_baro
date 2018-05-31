@@ -18,6 +18,8 @@ resources :services
 #Quiero todas las rutas menos la de new
 resources :users, except: [:new]
 
+get 'miscompras', to:'users#all'
+get 'mispendientes', to:'users#processar'
 get 'login', to:'sessions#new'
 post 'login', to: 'sessions#create'
 delete 'logout', to: 'sessions#destroy'
