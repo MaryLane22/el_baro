@@ -1,6 +1,5 @@
 <% obj.each.with_index do |oxxo_transaction,index| %>
 
-
       <%if oxxo_transaction.status == 0%>
       <p>Compra pendiente</p>
       <%= link_to 'Transaccion', edit_oxxo_transaction_path(oxxo_transaction) %>
@@ -11,7 +10,6 @@
           <%= oxxo_transaction.monto%>
 
           <%= oxxo_transaction.total%>
-
 
             <strong>Transaccion creada el: </strong><%= oxxo_transaction.created_at %>
 
