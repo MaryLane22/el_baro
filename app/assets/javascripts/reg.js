@@ -8,18 +8,19 @@ function vregistro(){
     car = document.getElementById("car").value;
     sem = document.getElementById("sem").value;
 
+alert(nom.length);
 //pas.length <8 || pas != pasc || !pas.match(/[a-zA-Z0-9][a-zA-Z0-9]+/)
 if(num == "" || nom == "" || usu == "" || pas == ""|| car == "" || sem== "" || pasc == ""){
 
     swal("Campos faltantes", "Por favor, introduzca la informacion en todos campos", "warning");
           }
-
+else if(nom.length < 15){
+    alert("si entra aqui");
+    swal("Nombre de al menos 15 digitos ", "", "warning");
+}
 else if(num != "" && nom != "" && usu != "" && pas != ""&& car != "" && sem != "" && pasc != "") {
 
-
          swal("Registro exitoso!", "Inicia sesión con tu usuario y conntraseña creados!", "success");
-    
-
 }
 else {
 
