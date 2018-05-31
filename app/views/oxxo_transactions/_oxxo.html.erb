@@ -1,25 +1,22 @@
 <% obj.each.with_index do |oxxo_transaction,index| %>
-<div class='row'>
-  <div class='col-xs-1 '>
-    <div class='well well-lg mar'>
+
 
       <%if oxxo_transaction.status == 0%>
       <p>Compra pendiente</p>
       <%= link_to 'Transaccion', edit_oxxo_transaction_path(oxxo_transaction) %>
       <%end%>
 
-        <%= link_to 'Transacción #'+(index+1).to_s, oxxo_transaction_path(oxxo_transaction) %>
+        <%= link_to 'Transacción #'+(index+1).to_s, oxxo_transaction_path(oxxo_transaction),{:style=>'color:red;', :class => "css_class"} %>
 
           <%= oxxo_transaction.monto%>
-          
+
           <%= oxxo_transaction.total%>
 
 
             <strong>Transaccion creada el: </strong><%= oxxo_transaction.created_at %>
 
+<br>
+<br>
 
 
-    </div>
-  </div>
-</div>
 <% end %>
