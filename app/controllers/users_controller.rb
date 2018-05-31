@@ -44,6 +44,14 @@ def show
    #@user_services = @user.services
 end
 
+def all
+  @users_oxxo_transactions = @user.oxxo_transactions.all
+end
+
+def process
+end
+
+
 private
 def user_params
   params.require(:user).permit(:nocontrol,:nombre,:usuario,:password, :carrera, :semestre, :cant_baros)
