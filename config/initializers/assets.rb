@@ -8,7 +8,7 @@ Rails.application.config.assets.precompile += %w(styles.css.scss)
 Rails.application.config.assets.precompile += %w( login.js )
 Rails.application.config.assets.precompile += %w( jquery.js )
 Rails.application.config.assets.precompile += %w( sidebar.css )
-
+Rails.application.config.assets.precompile += %w( reg.js )
 Rails.application.config.assets.precompile += %w( conv.js )
 
 
