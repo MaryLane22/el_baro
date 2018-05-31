@@ -7,11 +7,11 @@
 
         <%= link_to 'Transacción #'+(index+1).to_s, oxxo_transaction_path(oxxo_transaction),{:style=>'color:red;', :class => "css_class"} %>
 
-          <%= oxxo_transaction.monto%>
+        <%= oxxo_transaction.monto%>
 
-          <%= oxxo_transaction.total%>
+        <%= oxxo_transaction.total%>
 
-            <strong>Transaccion creada el: </strong><%= oxxo_transaction.created_at %>
+        <strong>Transaccion creada el: </strong><%= oxxo_transaction.created_at %>
 
 <br>
 <br>

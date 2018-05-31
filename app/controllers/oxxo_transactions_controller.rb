@@ -24,6 +24,7 @@ class OxxoTransactionsController < ApplicationController
   def create
       #render plain: params[:article].inspect
       @otransaction=OxxoTransaction.new(otransaction_params)
+      @otransaction.status = 0
       @otransaction.user = current_user
 
        if @otransaction.save
@@ -40,6 +41,8 @@ class OxxoTransactionsController < ApplicationController
   def update
 
       #Si se actualizo la iformacion que se mando en SUBMIT
+
+      @otransaction.update_attribute(:status, 1)
       if @otransaction.update(otransaction2_params)
           flash[:success] = "Compra de baros exitosa"
 
