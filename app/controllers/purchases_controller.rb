@@ -18,13 +18,28 @@ class PurchasesController < ApplicationController
     def create
     @purchase = Purchase.new(purchase_params)
     @purchase.user = current_user
+
+    @us = User.find(current_user)
+
+    if purchase_params[:total].to_f <= @us.cant_baros
+
       if @purchase.save
         flash[:success] = "COMPRA COMPLETADA!!"
+
+
+        @us.update_attribute(:cant_baros, @us.cant_baros-purchase_params[:total].to_f)
         redirect_to purchase_path(@purchase)
       else
         render 'new'
       end
+    else
+      flash[:danger] = "No cuentas con los baros suficientes"
+        render 'new'
+
     end
+    end
+
+
 
     def update
       @purchase.user = current_user
