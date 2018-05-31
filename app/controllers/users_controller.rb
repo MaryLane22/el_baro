@@ -45,7 +45,8 @@ def show
 end
 
 def all
-  @users_oxxo_transactions = @user.oxxo_transactions.all
+  @use = User.find(current_user)
+  @users_oxxo_transactions = @use.oxxo_transactions.all
 end
 
 def processar

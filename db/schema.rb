@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180529001233) do
+ActiveRecord::Schema.define(version: 20180531181211) do
 
   create_table "card_payments", force: :cascade do |t|
     t.string   "nombre_propietario"
@@ -42,13 +42,14 @@ ActiveRecord::Schema.define(version: 20180529001233) do
   end
 
   create_table "oxxo_transactions", force: :cascade do |t|
-    t.datetime "crated_at"
+    t.datetime "created_at"
     t.integer  "codigo_emitido"
     t.integer  "codigo_recibido"
     t.datetime "fecha_vencimiento"
     t.float    "monto"
     t.float    "total"
     t.integer  "user_id"
+    t.integer  "status"
   end
 
   create_table "purchase_details", force: :cascade do |t|
