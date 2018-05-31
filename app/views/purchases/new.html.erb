@@ -1,4 +1,4 @@
-=======
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,13 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="sidebar.css">
->>>>>>> develop
+    <%= stylesheet_link_tag    'styles', media: 'all' %>
+
 
   </head>
-  <body id="background_color">
+  <body id="background_color" onload="deshabilitarlos();">
     <div id="wrapper">
 
-=======
       <!-- Sidebar-->
       <div id="sidebar-wrapper" style="height: 180%!important;">
         <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
@@ -25,7 +25,6 @@
 
           <li><a>Cerrar sesión</a></li>
         </ul>
->>>>>>> develop
       </div>
 
       <!-- Page content-->
@@ -44,28 +43,28 @@
                           <div class="li_servicios"style="height:105%; width:95%;">
                             <h2 style="padding-top:5%; padding-bottom:6%; text-align:center;">CERTIFICADOS</h2>
                             <ul>
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_1','0');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 5 B</strong></div>
                                 <div class="dd">Certificado parcial por materia licenciatura</div>
                               </li>
-                              <li class="color" onclick="agregar('85');"style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('85','purchase_service_ids_2','1');"style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong>85 B</strong></div>
                                 <div class="dd"> Certificado de estudios (Profesional)</div>
                               </li>
-                              <li class="color" onclick="agregar('100');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('100','purchase_service_ids_3','2');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 100 B</strong></div>
                                 <div class="dd"> Certificado de grado de maestria</div>
                               </li>
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_4','3');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 5 B</strong></div>
                                 <div class="dd"> Certificado parcial por materia de maestria</div>
                               </li>
-                              <li class="color" onclick="agregar('85');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('85','purchase_service_ids_5','4');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 85 B</strong></div>
                                 <div class="dd"> Certificado de preparatoria</div>
                               </li>
 
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_6','5');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 5 B</strong></div>
                                 <div class="dd"> Certificación de documentos</div>
                               </li>
@@ -76,45 +75,45 @@
                           <div class="li_servicios"style="height:105%; width:110%; margin-left:-6%; ">
                             <h2 style="padding-top:5%; padding-bottom:6%;">TRAMITES GENERALES</h2>
                             <ul>
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_7','6');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 5 B</strong></div>
                                 <div class="dd">Duplicado de boleta de actividad extraesolar</div>
                               </li>
-                              <li class="color" onclick="agregar('85');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('85','purchase_service_ids_8','7');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 85 B</strong></div>
                                 <div class="dd">Duplicado de certificado de lic.</div>
                               </li>
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_9','8');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 5 B</strong></div>
                                 <div class="dd">Duplicado de constancia de servicio</div>
                               </li>
-                              <li class="color" onclick="agregar('30');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('30','purchase_service_ids_10','9');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 30 B</strong></div>
                                 <div class="dd">Examen de inglés para titulación</div>
                               </li>
-                              <li class="color" onclick="agregar('85');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('85','purchase_service_ids_11','10');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 85 B</strong></div>
                                 <div class="dd">Ficha de selección de nuevo ingreso</div>
                               </li>
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_12','11');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong> 5 B</strong></div>
                                 <div class="dd">Constancia de práctica y servicio social</div>
                               </li>
-                              <li class="color" onclick="agregar('15');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('15','purchase_service_ids_13','12');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong> 15 B</strong></div>
                                 <div class="dd" style="height:40px !important;">Examen especial</div>
                               </li>
 
-                              <li class="color" onclick="agregar('250');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('250','purchase_service_ids_14','13');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong> 250 B</strong></div>
                                 <div class="dd" style="height:40px !important;">Inscripción</div>
                               </li>
-                              <li class="color" onclick="agregar('250');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('250','purchase_service_ids_15','14');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong> 250 B</strong></div>
                                 <div class="dd" style="height:40px !important;">Reinscripción</div>
                               </li>
 
-                              <li class="color" onclick="agregar('50');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('50','purchase_service_ids_16','15');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong> 50 B</strong></div>
                                 <div class="dd" style="height:40px !important;">Curso de ingles</div>
                               </li>
@@ -125,36 +124,34 @@
                           <div class="li_servicios"style="height:105%; width:95%; ">
                             <h2 style="padding-top:5%; text-align:center; padding-bottom:6%;">RENTAS Y EXTRAS</h2>
                             <ul>
-                              <li class="color" onclick="agregar('300');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('300','purchase_service_ids_17','16');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong>300 B</strong></div>
                                 <div class="dd"> Renta de teatro Cala-Fórnix</div>
                               </li>
-                              <li class="color" onclick="agregar('250');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('250','purchase_service_ids_18','17');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong>250 B</strong></div>
                                 <div class="dd"> Renta por día de canchas</div>
                               </li>
-                              <li class="color" onclick="agregar('250');" style="width:260px; height:60px; position:relative;">
+                              <li class="color" onclick="agregar('250','purchase_service_ids_19','18');" style="width:260px; height:60px; position:relative;">
                                 <div class="pp"><strong>250 B</strong></div>
                                 <div class="dd"> Renta por dia de gimnasio</div>
                               </li>
-                              <li class="color" onclick="agregar('10');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('10','purchase_service_ids_20','19');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong>10 B</strong></div>
                                 <div class="dd" style="height:40px !important;"> Suéter personalizado</div>
                               </li>
-                              <li class="color" onclick="agregar('10');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('10','purchase_service_ids_21','20');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong>10 B</strong></div>
                                 <div class="dd" style="height:40px !important;"> Credencial de egresado</div>
                               </li>
-                              <li class="color" onclick="agregar('10');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('10','purchase_service_ids_22','21');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong>10 B</strong></div>
                                 <div class="dd" style="height:40px !important;"> Credencial o duplicado</div>
                               </li>
-                              <li class="color" onclick="agregar('5');" style="width:260px; height:35px; position:relative;">
+                              <li class="color" onclick="agregar('5','purchase_service_ids_23','22');" style="width:260px; height:35px; position:relative;">
                                 <div class="pp"><strong>5 B</strong></div>
                                 <div class="dd" style="height:40px !important;"> Compra de accesorios</div>
                               </li>
-
-
 
                             </ul>
 
@@ -167,21 +164,17 @@
                       </div> <!-- Fin de ROW 3-->
                     </div> <!-- Fin de row-->
                     <div class="col-lg-12 centrar"style="border: solid 1px #D3D4D8; margin-top:10px; border-radius:3px;">
-                        <div id="botones_selec">
-                        </div>
                         <%= form_for(@purchase,:html => {id:'forma7',style:" width:360px; margin-left:40%;"}) do |f| %>
-
-                        <div id="totalix" style="transform:translateY(350%);">
-
-
+                        <div id="totalix">
                           <%= f.collection_check_boxes :service_ids,Service.all, :id, :nombre do |cb| %>
                             <% cb.label(class:'checkbox-inline input_checkbox'){cb.check_box(class:'checkbox')+cb.text} %>
                           <% end %>
-
+                        <div  style="transform:translateY(250%);">
                             <p class='parrafos'style="transform:translate(-10%,-24%); position:absolute;" >Total:</p>
                             <%= f.text_field :total ,id: 'moneybags',placeholder:'Total',class: 'el bservicios',style:"position:relative; display:inline;"%>
                             <%=  f.submit class:'registrar',id:'term',style:"position:relative; color: white; margin-bottom:40px;"%>
-                          <% end %>
+                        </div>
+                        <% end %>
                         </div>
                     </div>
                     <p onclick="regresar();">Regresar al inicio <p>
@@ -200,15 +193,25 @@
    </script>
 
   <script type="text/javascript" src="javascript/conv.js"></script>
+  <script type="text/javascript" src="javascript/checkboxy.js"></script>
   <script>
     var total=0;
     var elem=0;
-    function agregar(precio){
+    var n=0;
+    function agregar(precio,idcheckbox,nel){
       elem= parseFloat(precio);
       total= total+elem;
-      alert("Nuevo elemento agregado:"+elem);
+      n = parseInt(nel);
+      var x = document.getElementsByClassName("dd")[n].innerHTML;
+      alert("Nuevo elemento agregado: "+x+" [ "+elem+" ] ");
+      
       document.getElementById("moneybags").value= String(total);
+      document.getElementById(idcheckbox).checked=true;
     }
+    function deshabilitarlos(){
+      $( ".checkbox" ).prop('disabled',true);
+    }
+    
   </script>
   <script>
   function regresar(){
@@ -216,7 +219,6 @@
   }
   </script>
 
-<<<<<<< HEAD
 </div>
 </div>
 
@@ -229,7 +231,5 @@ $('document').ready(function(){
 });
 
 </script>
-=======
   </body>
 </html>
->>>>>>> develop

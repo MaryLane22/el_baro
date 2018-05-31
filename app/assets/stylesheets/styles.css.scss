@@ -441,6 +441,7 @@ border: solid #D3D4D8;
 
 #paso2_visa{
   visibility: hidden;
+  position: absolute;
 }
 
 
@@ -464,3 +465,71 @@ form.uu{
   pointer-events: none;
   background-color: #F2F2EE;
 }
+
+/* STYLING SERVICIOS PAGE*/
+
+#terminar_pop{
+background-color: #F8F9FB;
+height:40%;
+width: 40%;
+position:absolute;
+transform:translate(-50%,-50%);
+z-index:2;
+}
+
+.li_servicios{
+  font-size: 18px;
+  color: #636570;
+  font-family: 'Quicksand', sans-serif;
+  margin:0;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 15%;
+}
+
+.color{
+  border-radius: 6px;
+  list-style:none;
+  margin:3%;
+}
+
+#mitotales{
+width:120px;
+height: 70px;
+position: fixed;
+transform: translate(930%,40%);
+background-color: #FF002F;
+border-radius: 3px;
+}
+
+.pp{ /*PRECIO*/
+ display:inline;
+ margin-top:2px;
+ position:absolute;
+}
+
+.dd{ /*DESCRIPCION*/
+  display:inline;
+  height:60px;
+  width:200px;
+  position:absolute;
+  margin-left:65px;
+  border: solid  1px #01BCD5;
+  border-radius: 3px;
+}
+
+/* Seccion donde acomode el sub*/
+.centrar{
+height: 400px;
+}
+.bservicios{
+  pointer-events: none;
+  background-color: #F2F2EE;
+  display:inline;
+}
+.yaestaclickeado{
+  border: solid  1px #5FBD5F !important;
+}
+
+/*Compras pasadas y pendientes*/
