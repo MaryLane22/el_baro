@@ -1,42 +1,222 @@
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>elbaro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar.css">
+>>>>>>> develop
 
-<div class='row'>
-  <div class='col-xs-12'>
-    <%= form_for(@purchase,:html => {class:'form-horizontal',role:'form'}) do |f| %>
+  </head>
+  <body id="background_color">
+    <div id="wrapper">
+
+=======
+      <!-- Sidebar-->
+      <div id="sidebar-wrapper" style="height: 180%!important;">
+        <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
+        <ul class="sidebar-nav">
+
+          <li><a>Cerrar sesión</a></li>
+        </ul>
+>>>>>>> develop
+      </div>
+
+      <!-- Page content-->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+              <%= image_tag("menu.png", :alt =>"menu" , id:"m",onclick: "togg();") %>
+
+               <!--Grafica de lineas-->
+                  <div class="container">
+                    <h3 class="titulo">Mis<strong> servicios</strong></h3>
+                    <hr class="title-hr">
+                    <div class="row">
+                      <div class="col-md-4" >
+                          <div class="li_servicios"style="height:105%; width:95%;">
+                            <h2 style="padding-top:5%; padding-bottom:6%; text-align:center;">CERTIFICADOS</h2>
+                            <ul>
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 5 B</strong></div>
+                                <div class="dd">Certificado parcial por materia licenciatura</div>
+                              </li>
+                              <li class="color" onclick="agregar('85');"style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong>85 B</strong></div>
+                                <div class="dd"> Certificado de estudios (Profesional)</div>
+                              </li>
+                              <li class="color" onclick="agregar('100');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 100 B</strong></div>
+                                <div class="dd"> Certificado de grado de maestria</div>
+                              </li>
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 5 B</strong></div>
+                                <div class="dd"> Certificado parcial por materia de maestria</div>
+                              </li>
+                              <li class="color" onclick="agregar('85');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 85 B</strong></div>
+                                <div class="dd"> Certificado de preparatoria</div>
+                              </li>
+
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 5 B</strong></div>
+                                <div class="dd"> Certificación de documentos</div>
+                              </li>
+                            </ul>
+                          </div>
+                      </div> <!-- Fin de ROW 1 -->
+                      <div class="col-md-4" >
+                          <div class="li_servicios"style="height:105%; width:110%; margin-left:-6%; ">
+                            <h2 style="padding-top:5%; padding-bottom:6%;">TRAMITES GENERALES</h2>
+                            <ul>
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 5 B</strong></div>
+                                <div class="dd">Duplicado de boleta de actividad extraesolar</div>
+                              </li>
+                              <li class="color" onclick="agregar('85');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 85 B</strong></div>
+                                <div class="dd">Duplicado de certificado de lic.</div>
+                              </li>
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 5 B</strong></div>
+                                <div class="dd">Duplicado de constancia de servicio</div>
+                              </li>
+                              <li class="color" onclick="agregar('30');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 30 B</strong></div>
+                                <div class="dd">Examen de inglés para titulación</div>
+                              </li>
+                              <li class="color" onclick="agregar('85');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 85 B</strong></div>
+                                <div class="dd">Ficha de selección de nuevo ingreso</div>
+                              </li>
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong> 5 B</strong></div>
+                                <div class="dd">Constancia de práctica y servicio social</div>
+                              </li>
+                              <li class="color" onclick="agregar('15');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong> 15 B</strong></div>
+                                <div class="dd" style="height:40px !important;">Examen especial</div>
+                              </li>
+
+                              <li class="color" onclick="agregar('250');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong> 250 B</strong></div>
+                                <div class="dd" style="height:40px !important;">Inscripción</div>
+                              </li>
+                              <li class="color" onclick="agregar('250');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong> 250 B</strong></div>
+                                <div class="dd" style="height:40px !important;">Reinscripción</div>
+                              </li>
+
+                              <li class="color" onclick="agregar('50');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong> 50 B</strong></div>
+                                <div class="dd" style="height:40px !important;">Curso de ingles</div>
+                              </li>
+                            </ul>
+                          </div>
+                      </div> <!-- Fin de ROW 2 -->
+                      <div class="col-md-4" >
+                          <div class="li_servicios"style="height:105%; width:95%; ">
+                            <h2 style="padding-top:5%; text-align:center; padding-bottom:6%;">RENTAS Y EXTRAS</h2>
+                            <ul>
+                              <li class="color" onclick="agregar('300');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong>300 B</strong></div>
+                                <div class="dd"> Renta de teatro Cala-Fórnix</div>
+                              </li>
+                              <li class="color" onclick="agregar('250');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong>250 B</strong></div>
+                                <div class="dd"> Renta por día de canchas</div>
+                              </li>
+                              <li class="color" onclick="agregar('250');" style="width:260px; height:60px; position:relative;">
+                                <div class="pp"><strong>250 B</strong></div>
+                                <div class="dd"> Renta por dia de gimnasio</div>
+                              </li>
+                              <li class="color" onclick="agregar('10');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong>10 B</strong></div>
+                                <div class="dd" style="height:40px !important;"> Suéter personalizado</div>
+                              </li>
+                              <li class="color" onclick="agregar('10');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong>10 B</strong></div>
+                                <div class="dd" style="height:40px !important;"> Credencial de egresado</div>
+                              </li>
+                              <li class="color" onclick="agregar('10');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong>10 B</strong></div>
+                                <div class="dd" style="height:40px !important;"> Credencial o duplicado</div>
+                              </li>
+                              <li class="color" onclick="agregar('5');" style="width:260px; height:35px; position:relative;">
+                                <div class="pp"><strong>5 B</strong></div>
+                                <div class="dd" style="height:40px !important;"> Compra de accesorios</div>
+                              </li>
 
 
-<div class='form-group'>
-  <div class='row'>
-    <div class='col-sm-offset-2 col-ms-8'>
-      <%= f.collection_check_boxes :service_ids, Service.all, :id, :nombre do |cb| %>
-        <% cb.label(class:'checkbox-inline input_checkbox', id: "lbl"){cb.check_box(class:'checkbox', id: "chk")+cb.text} %>
 
-      <% end %>
+                            </ul>
+
+                          </div>
+                          <div id="terminar_pop" style="border: solid red; visibility:hidden;"> <!-- POPUP QUE PREGUNTA SI YA TERMINASTE LA COMPRA-->
+                              <h3 class="center-elements-conversion"><strong>Terminar selección ?</strong></h3><br>
+                              <button type="button" id="terminarseleccion" class="btn btn-primary" style="margin-left:44%; margin-top:3%;">Terminar</button>
+                              <hr>
+                          </div><!-- FIN DE POPUP-->
+                      </div> <!-- Fin de ROW 3-->
+                    </div> <!-- Fin de row-->
+                    <div class="col-lg-12 centrar"style="border: solid 1px #D3D4D8; margin-top:10px; border-radius:3px;">
+                        <div id="botones_selec">
+                        </div>
+                        <%= form_for(@purchase,:html => {id:'forma7',style:" width:360px; margin-left:40%;"}) do |f| %>
+
+                        <div id="totalix" style="transform:translateY(350%);">
+
+
+                          <%= f.collection_check_boxes :service_ids,Service.all, :id, :nombre do |cb| %>
+                            <% cb.label(class:'checkbox-inline input_checkbox'){cb.check_box(class:'checkbox')+cb.text} %>
+                          <% end %>
+
+                            <p class='parrafos'style="transform:translate(-10%,-24%); position:absolute;" >Total:</p>
+                            <%= f.text_field :total ,id: 'moneybags',placeholder:'Total',class: 'el bservicios',style:"position:relative; display:inline;"%>
+                            <%=  f.submit class:'registrar',id:'term',style:"position:relative; color: white; margin-bottom:40px;"%>
+                          <% end %>
+                        </div>
+                    </div>
+                    <p onclick="regresar();">Regresar al inicio <p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
-
-<br>
-<br>
-<br>
-<div class='form-group'>
-      <div class='control-label col-sm-2'>
-        <%= f.label :total %>
-      </div>
-      <div class='col-sm-8'>
-        <%= f.text_field :total, class:'form-control',placeholder: 'Total'%>
-      </div>
-</div>
 
 
-<div class='form-group'>
-  <div id= "btmargin" class='col-sm-offset-2 col-sm-10'>
-    <%= f.submit class:'btn btn-primary btn-lg'%>
-  </div>
-</div>
+    <!--Menu toggle script -->
+   <script>
+     function togg(){
+     $("#wrapper").toggleClass("menuDisplayed"); };
+   </script>
 
+  <script type="text/javascript" src="javascript/conv.js"></script>
+  <script>
+    var total=0;
+    var elem=0;
+    function agregar(precio){
+      elem= parseFloat(precio);
+      total= total+elem;
+      alert("Nuevo elemento agregado:"+elem);
+      document.getElementById("moneybags").value= String(total);
+    }
+  </script>
+  <script>
+  function regresar(){
+     window.scrollTo(0, 0)
+  }
+  </script>
 
-    <% end %>
-
+<<<<<<< HEAD
 </div>
 </div>
 
@@ -49,3 +229,7 @@ $('document').ready(function(){
 });
 
 </script>
+=======
+  </body>
+</html>
+>>>>>>> develop

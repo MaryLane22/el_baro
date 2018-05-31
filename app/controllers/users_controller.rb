@@ -19,17 +19,8 @@ class UsersController < ApplicationController
       redirect_to root_path
       #redirect_to user_path(@user)
     else
-
     redirect_to login_path
 
-      #sweetalert_error('Hubo un error con tu informacion', 'Oops!', persistent: 'OK!');
-      #sweetalert('Hubo un error con tu informacion', 'Oops!', persistent: 'OK!');
-
-
-      #redirect_to signup_path
-      #render 'show'
-
-      #render 'new'
     end
 
   end
@@ -53,6 +44,14 @@ def show
    #@user_services = @user.services
 end
 
+def all
+  @users_oxxo_transactions = @user.oxxo_transactions.all
+end
+
+def process
+end
+
+
 private
 def user_params
   params.require(:user).permit(:nocontrol,:nombre,:usuario,:password, :carrera, :semestre, :cant_baros)
@@ -68,5 +67,11 @@ def require_same_user
     redirect_to user_path(@user)
   end
 end
+
+def get_actualbaros
+  @user = User.find(current_user)
+  return (@user.cant_baros)
+end
+
 
 end
