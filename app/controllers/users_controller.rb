@@ -48,7 +48,8 @@ def all
   @users_oxxo_transactions = @user.oxxo_transactions.all
 end
 
-def process
+def processar
+  @users_oxxo_transactions = @user.oxxo_transactions.all
 end
 
 
