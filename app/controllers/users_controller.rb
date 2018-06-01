@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       #cuando se registre un nuevo usuario [create]:
 directory_name = "Usuarios/" + @user.usuario
 Dir.mkdir(directory_name) unless File.exists?(directory_name) #Crear el directorio donde se ubica el archivo del baro del usuario.
-FileUtils.touch('Usuarios/' + @user.usuario+'/0')  #Crear baro inicial.
+FileUtils.touch('Usuarios/' + @user.usuario+'/0.baro')  #Crear baro inicial.
 
 
 

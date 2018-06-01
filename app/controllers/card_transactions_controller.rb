@@ -1,4 +1,5 @@
 class CardTransactionsController < ApplicationController
+  require 'fileutils'
   before_action :set_ctransaction, only: [:edit, :destroy, :show]
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :destroy]
@@ -52,15 +53,16 @@ class CardTransactionsController < ApplicationController
            @user.update_attribute(:cant_baros, cbt)
 
            x = cbt.to_s.split('')
-           y = x[0]+x[1]
+           @y = x[0]+x[1]
 
 
 #-------------------------------------------------------------------------------
 #poner esto hasta el final del update
 folder_path = "/home/marisol/adminredes/el_baro/Usuarios/" +  @user.usuario #ruta de la carpeta del usuario.
+
 Dir.glob(folder_path + "/" + @baro_old.to_s).sort.each do |f|
 filename = File.basename(f, File.extname(f))
-File.rename(f, folder_path + "/" + y.to_s + File.extname(f)) #reemplaza el nombre archivo
+File.rename(f, folder_path + "/" + @y.to_s + File.extname(f)) #reemplaza el nombre archivo
 end
 
 
