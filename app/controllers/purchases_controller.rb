@@ -48,6 +48,7 @@ can_b = @us.cant_baros-purchase_params[:total].to_f
         Dir.glob(folder_path + "/" +@baro_old.to_s).sort.each do |f|
         filename = File.basename(f, File.extname(f))
         File.rename(f, folder_path + "/" +cbt.to_s+ File.extname(f)) #reemplaza el nombre archivo
+      end
 
 
 
