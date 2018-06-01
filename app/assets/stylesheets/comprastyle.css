@@ -1,0 +1,21 @@
+.comprish1{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.bannerhead{
+    margin-top: 50px;
+}
+
+.cuerpeson{
+    margin-top: 50px;
+    margin-left: 33%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    border-radius: 5px;
+    border: solid 1px  #00B8CE;
+}
+
+.grande{
+    width:800px !important;
+    list-style:none;
+}
