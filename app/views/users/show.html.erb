@@ -48,15 +48,18 @@
                     </div>
                     <div class="col-md-4 noticias" >
 
-                      <div class="info-box" id="entradas">
-                        <%= @user.cant_baros%><h3 class="lbl-notic">BAROS<h3>
-                        <p class="descripcion-notic">Monto actual</p>
+                      <div class="info-box" id="entradas" style="padding:15px!important;">
+                        <h3><%= @user.cant_baros%></h3><h5>BAROS</h5>
+                        
                       </div>
 
-                      <div class="info-box" id="salidas">
-                        <% @purchase = Purchase.last %>
-                        <%= @purchase %><h3 class="lbl-notic">BAROS<h3>
-                        <p class="descripcion-notic">Ultimo retiro</p>
+                      <div class="info-box" id="salidas" style="padding:15px!important;">
+                        <% if @purchase == nil %>
+                        <h3>0</h3><h5>BAROS</h5>
+                        <%else%>
+                         <h3><%= @purchase.last %></h3><h5>BAROS</h5>
+                        <% end %>
+                        
                       </div>
                       <div id="donut-example"></div>
 
