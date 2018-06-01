@@ -1,70 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>elbaro</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-  <link rel="stylesheet" href="sidebar.css">
-
-
-
-</head>
-<body id="background_color">
-  <div id="wrapper">
-    <!-- Page content-->
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="col-lg-12">
-              <div class="container">
-                <h3 class="titulo">Detalle de<strong> compra</strong></h3>
-                <hr class="title-hr">
-              </div>
-            </div>
-          </div>
-          <!--Este es el div que tiene el margen gris-->
-          <div class='col-lg-10' style='border: solid 1px #DCDCDE; height:600px; border-radius:6px; margin-top:1%; margin-left:8%;'>
-
-            <h3 class="subtitulo">No. referencia: <%= @otransaction.codigo_emitido %></h3><hr>
-            <h3 class="subtitulo">Monto:          <%= @otransaction.monto%></h3><hr>
-            <h3 class="subtitulo">Total baros: <%= @otransaction.total %></h3><hr>
-            <p class="descripcion-notic">Fecha de compra: <%= time_ago_in_words(@otransaction.created_at) %></p>
-
-          </div>
-
-        </div>
-      </div>
+<html>
+  <!--Inicio de Head-->
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="comprastyle.css">
+    <%= stylesheet_link_tag    'comprastyle', media: 'all' %>
+  </head>
+  
+  <!--Inicio de Body -->
+  <body>
+    <!-- Inicio de clase encabezado-->
+    <div class="bannerhead">
+      <h1 class="comprish1" align="center"> COMPRA CON OXXO </h1>
     </div>
+    <!-- Inicio de contenido -->
+    <div class='well col-xs-8 col-xs-offset-2'>
+    <!-- Inicio de columna central -->
+    <div class="cuerpeson col-md-4">
+      <h5 style="margin-top:15px;">No. referencia: <%= @otransaction.codigo_emitido %></h3><hr>
+      <h5 >Monto:          <%= @otransaction.monto%></h3><hr>
+      <h5 >Total baros: <%= @otransaction.total %></h3><hr>
+      <h5>Fecha de compra: <%= time_ago_in_words(@otransaction.created_at) %></h5><hr>
 
-    </div>
-
-
-
-  <!--Menu toggle script -->
- <script>
-   function togg(){
-   $("#wrapper").toggleClass("menuDisplayed"); }
- </script>
-
- <script>
- $(document).ready(function(){
-     $(".field").hover(function(){
-         $(this).css("width", "400px");
-         $(this).css("transition", "0.3s");
-         }, function(){
-         $(this).css("width", "500px");
-     });
- });
- </script>
-
-
-
-</body>
+      
+    </div> <!--Fin de columna central-->
+  </div>  <!--Fin de contenido -->
+  <h2 align='center' style="margin-top:40px;">Tu compra fue realizada con éxito! </h2>
+  </body>  
+  
 </html>
