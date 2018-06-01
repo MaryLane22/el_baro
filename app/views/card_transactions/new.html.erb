@@ -22,8 +22,11 @@
     <div id="sidebar-wrapper">
       <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
       <ul class="sidebar-nav">
-
-        <li><a>Cerrar sesión</a></li>
+        <li><%= link_to "Mi cartera", user_path(@user) %></li>
+        <li><%= link_to "Servicios", new_purchase_path %></li>
+        <li><%= link_to "Comprar baros", page_path(@user) %></li>
+        <li><%= link_to "Mis compras", miscompras_path%></li>
+        <li><%= link_to 'Cerrar sesion',logout_path, id:'signup',method: :delete %></li>
       </ul>
     </div>
 

@@ -16,6 +16,14 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success]="Bienvenido a el B A R O #{@user.usuario}"
+
+      #cuando se registre un nuevo usuario [create]:
+directory_name = "Usuarios/" + @user.usuario
+Dir.mkdir(directory_name) unless File.exists?(directory_name) #Crear el directorio donde se ubica el archivo del baro del usuario.
+FileUtils.touch('Usuarios/' + @user.usuario+'/0')  #Crear baro inicial.
+
+
+
       redirect_to root_path
       #redirect_to user_path(@user)
     else
@@ -42,11 +50,14 @@ end
 
 def show
    #@user_services = @user.services
+   @user = User.find(current_user)
 end
 
 def all
   @use = User.find(current_user)
   @users_oxxo_transactions = @use.oxxo_transactions.all
+  #Para pagos con tarjeta
+  @users_card_transactions = @use.card_transactions.all
 end
 
 def processar
