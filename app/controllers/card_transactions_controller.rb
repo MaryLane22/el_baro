@@ -59,11 +59,11 @@ class CardTransactionsController < ApplicationController
 #-------------------------------------------------------------------------------
 #poner esto hasta el final del update
 folder_path = "/home/marisol/adminredes/el_baro/Usuarios/" +  @user.usuario #ruta de la carpeta del usuario.
-
-Dir.glob(folder_path + "/" + @baro_old.to_s).sort.each do |f|
-filename = File.basename(f, File.extname(f))
-File.rename(f, folder_path + "/" + @y.to_s + File.extname(f)) #reemplaza el nombre archivo
-end
+file=Dir[folder_path + '/*.baro'].first
+#Dir.glob(folder_path + "/" + @baro_old.to_s).sort.each do |f|
+#filename = File.basename(f, File.extname(f))
+File.rename(file, folder_path + "/" + @y.to_s + ".baro") #reemplaza el nombre archivo
+#end
 
 
 
