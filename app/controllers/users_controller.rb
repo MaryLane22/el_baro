@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   #Parametros reutilizables
-  before_action :set_user, only: [:edit,:update,:show]
-  before_action :require_same_user, only: [:edit,:update,:show]
+  before_action :set_user, only: [:edit,:update,:show,:all]
+  before_action :require_same_user, only: [:edit,:update,:show,:all]
   def index
     @user = User.all
   end
@@ -71,7 +71,7 @@ def user_params
 end
 
 def set_user
-  @user = User.find(params[:id])
+  @user =  User.find(current_user)
 end
 
 def require_same_user
