@@ -1,5 +1,11 @@
 class ServicesController < ApplicationController
 
+  before_action :require_same_user, only: [:edit, :destroy]
+
+  #Ocupar para todos
+  before_action :set_user, only: [:edit,:update,:show,:new]
+
+
    def index
       @service = Service.all
     end
@@ -19,6 +25,21 @@ class ServicesController < ApplicationController
   def category_params
     params.require(:service).permit(:nombre)
   end
+
+
+  #Ocupar para todos
+    def set_user
+      @user = User.find(current_user)
+    end
+
+    def require_same_user
+
+      if current_user != @ctransaction.user and @user.usuario != 'administrador'
+        fash[:danger] = "Solo puedes editar tu cuenta"
+        redirect_to user_path(@user)
+      end
+
+    end
 
 
 

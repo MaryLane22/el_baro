@@ -1,0 +1,14 @@
+<% obj.each.with_index do |card_transaction,index| %>
+
+
+        <%= link_to 'Transacción #'+(index+1).to_s, card_transaction_path(card_transaction),{:style=>'color:red;', :class => "css_class"} %>
+
+        <%= card_transaction.monto%>
+        <%= card_transaction.total%>
+        <strong>Transaccion creada el: </strong><%= card_transaction.created_at %>
+
+<br>
+<br>
+
+
+<% end %>

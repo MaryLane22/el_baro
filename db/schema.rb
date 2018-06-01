@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180531181211) do
+ActiveRecord::Schema.define(version: 20180531231616) do
 
   create_table "card_payments", force: :cascade do |t|
     t.string   "nombre_propietario"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20180531181211) do
   end
 
   create_table "card_transactions", force: :cascade do |t|
-    t.datetime "crated_at"
+    t.datetime "created_at"
     t.string   "nombre_propietario"
     t.string   "nombre_banco"
     t.string   "numero_tarjeta"

@@ -4,6 +4,9 @@ class PurchasesController < ApplicationController
     before_action :require_user,except:[:index,:show]
     before_action :require_same_user,only:[:edit,:update,:destroy]
 
+    #Ocupar para todos
+    before_action :set_user, only: [:edit,:update,:show,:new]
+
     def index
       @purchase = Purchase.all
     end
@@ -26,8 +29,30 @@ class PurchasesController < ApplicationController
       if @purchase.save
         flash[:success] = "COMPRA COMPLETADA!!"
 
+        @user = User.find(current_user)
+        #cuando se compren o se gasten baros  [update]:
+       #poner esto al principio del update
+     @baro_old = @user.cant_baros #cantidad antigua de baros
 
+
+#-------------------------------------------------------------------------------
+
+
+can_b = @us.cant_baros-purchase_params[:total].to_f
         @us.update_attribute(:cant_baros, @us.cant_baros-purchase_params[:total].to_f)
+
+
+        #-------------------------------------------------------------------------------
+        #poner esto hasta el final del update
+        folder_path = "/home/marisol/adminredes/el_baro/Usuarios/" +  @user.usuario #ruta de la carpeta del usuario.
+        Dir.glob(folder_path + "/" +@baro_old.to_s).sort.each do |f|
+        filename = File.basename(f, File.extname(f))
+        File.rename(f, folder_path + "/" +cbt.to_s+ File.extname(f)) #reemplaza el nombre archivo
+
+
+
+
+
         redirect_to purchase_path(@purchase)
       else
         render 'new'
@@ -58,6 +83,12 @@ class PurchasesController < ApplicationController
     def set_purchase
       @purchase = Purchase.find(params[:id])
     end
+
+    #Ocupar para todos
+      def set_user
+        @user = User.find(current_user)
+      end
+
 
     def purchase_params
       params.require(:purchase).permit(:total,:user_id,service_ids:[])

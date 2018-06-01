@@ -3,6 +3,9 @@ class CardTransactionsController < ApplicationController
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :destroy]
 
+  #Ocupar para todos
+  before_action :set_user, only: [:edit,:update,:show,:new]
+
   def index
       #Este cargara un numero de items o articulos por pagina y podemos decirle cuantos por pagina
       #Para que se vea, en el index de articulos agregamos algunas lineas de codigo
@@ -21,13 +24,25 @@ class CardTransactionsController < ApplicationController
 
   def create
       #render plain: params[:article].inspect
+
        @ctransaction=CardTransaction.new(ctransaction_params)
        @ctransaction.user = current_user
+
+       @user = User.find(current_user)
+
+       #cuando se compren o se gasten baros  [update]:
+      #poner esto al principio del update
+    @baro_old = @user.cant_baros #cantidad antigua de baros
+
+
        if @ctransaction.save
            flash[:success] = "Compra de baros exitosa!"
 
+
+#-------------------------------------------------------------------------------
+
            #Registro de baros
-           @user = User.find(current_user)
+
            tipo_cambio=10
            #@ctlast = CardTransaction.last
            c_baros = ctransaction_params[:monto].to_f / tipo_cambio
@@ -35,6 +50,21 @@ class CardTransactionsController < ApplicationController
            cbt = c_baros + @user.cant_baros.to_f
            #Aumentar la cantidad de baros al usuario
            @user.update_attribute(:cant_baros, cbt)
+
+           x = cbt.to_s.split('')
+           y = x[0]+x[1]
+
+
+#-------------------------------------------------------------------------------
+#poner esto hasta el final del update
+folder_path = "/home/marisol/adminredes/el_baro/Usuarios/" +  @user.usuario #ruta de la carpeta del usuario.
+Dir.glob(folder_path + "/" + @baro_old.to_s).sort.each do |f|
+filename = File.basename(f, File.extname(f))
+File.rename(f, folder_path + "/" + y.to_s + File.extname(f)) #reemplaza el nombre archivo
+end
+
+
+
            redirect_to card_transaction_path(@ctransaction)
        else
            render 'new'
@@ -62,12 +92,10 @@ class CardTransactionsController < ApplicationController
        @ctransaction = CardTransaction.find(params[:id])
   end
 
-
-  def ctransaction_params
-      params.require(:card_transaction).permit(:nombre_propietario,:numero_tarjeta,:fecha_vencimiento,
-      :codigo,:monto,:total)
+#Ocupar para todos
+  def set_user
+    @user = User.find(current_user)
   end
-
 
   def require_same_user
 
@@ -77,6 +105,16 @@ class CardTransactionsController < ApplicationController
     end
 
   end
+
+
+
+  def ctransaction_params
+      params.require(:card_transaction).permit(:nombre_propietario,:numero_tarjeta,:fecha_vencimiento,
+      :codigo,:monto,:total)
+  end
+
+
+
 
 
 
