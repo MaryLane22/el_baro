@@ -19,3 +19,13 @@
     width:800px !important;
     list-style:none;
 }
+
+
+.cuerpesin{
+    margin-top: 50px;
+    margin-left:10%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 1px  #00B8CE;
+}

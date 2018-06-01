@@ -27,7 +27,7 @@ function mostrarpaso2(){
 
 function mostrarpaso2_visa(){
 
-  alert("nel perro");
+  
     document.getElementById("paso1_visa").style.visibility="hidden";
     document.getElementById("paso2_visa").style.visibility="visible";
     document.getElementById("continuarconversion").style.visibility="hidden";

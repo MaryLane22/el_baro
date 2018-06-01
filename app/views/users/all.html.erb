@@ -1,6 +1,103 @@
-<h1>Pagos con tarjeta</h1>
-<br>
-<%= render 'card_transactions/card',obj:@use.card_transactions %>
-<h1>Pagos con oxxo</h1>
-<br>
-<%= render 'oxxo_transactions/oxxo',obj:@use.oxxo_transactions %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>elbaro</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" href="sidebar.css">
+  
+  <link rel="stylesheet" href="comprastyle.css">
+  <%= stylesheet_link_tag    'comprastyle', media: 'all' %>
+
+</head>
+<body id="background_color">
+  <div id="wrapper">
+
+    <!-- Sidebar-->
+    <div id="sidebar-wrapper">
+      <%= image_tag("logo_large.png", :alt =>"logo" , id:"logo") %>
+      <ul class="sidebar-nav">
+        <li><%= link_to "Mi cartera", user_path(@user) %></li>
+        <li><%= link_to "Servicios", new_purchase_path %></li>
+        <li><%= link_to "Comprar baros", page_path(@user)%></li>
+        <li><%= link_to "Mis compras", miscompras_path%></li>
+        <li><%= link_to 'Cerrar sesion',logout_path, id:'signup',method: :delete %></li>
+      </ul>
+    </div>
+
+    <!-- Page content-->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <%= image_tag("menu.png", :alt =>"menu" , id:"m",onclick: "togg();") %>
+
+             <!--Grafica de lineas-->
+                <div class="container">
+                  <h3 class="titulo"><strong>Mi</strong> cartera</h3>
+                  <hr class="title-hr">
+                  <div class="row">
+                      <!-- HEHEHEHEHEHEHEH -->
+                    <div class="col-md-12">
+                    <!-- Inicio de clase encabezado-->
+                    <div class="bannerhead">
+                      <h1 class="comprish1" align="center"> MIS COMPRAS </h1>
+                    </div>
+                    <!-- Inicio de contenido -->
+                    <div class='well col-xs-8 col-xs-offset-2' style="display:inline;">
+                        <!-- Inicio de columna central -->
+                        <div class="cuerpesin col-md-10">
+                                  
+                            <h2>Pagos con tarjeta</h2>
+                            <br>
+                            <%= render 'card_transactions/card',obj:@use.card_transactions %>
+                            
+                            <h2>Pagos con oxxo</h2>
+                            <br>
+                            <%= render 'oxxo_transactions/oxxo',obj:@use.oxxo_transactions %>
+                    
+                        </div> <!--Fin de columna central-->
+                        
+                    </div>  <!--Fin de contenido -->
+                    
+                    </div><!-- FIN DE HEHEHEHHEH -->
+                  </div>
+
+
+                </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+
+
+
+
+
+  <!--Menu toggle script -->
+ <script>
+
+
+
+   function togg(){
+   $("#wrapper").toggleClass("menuDisplayed"); }
+ </script>
+
+ <script src="/morris.min.js"></script>
+
+
+
+
+
+</body>
+</html>
